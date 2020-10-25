@@ -1,0 +1,16 @@
+D:\Inetpub\proje\emlak\obj\Debug\emlak.pdb
+D:\Inetpub\proje\emlak\bin\emlak.dll
+D:\Inetpub\proje\emlak\bin\emlak.pdb
+D:\Inetpub\proje\emlak\bin\CKEditor.NET.dll
+D:\Inetpub\proje\emlak\bin\Elmah.dll
+D:\Inetpub\proje\emlak\bin\EntityFramework.dll
+D:\Inetpub\proje\emlak\bin\EntityFramework.SqlServer.dll
+D:\Inetpub\proje\emlak\bin\MySql.Data.dll
+D:\Inetpub\proje\emlak\bin\MySql.Data.Entity.dll
+D:\Inetpub\proje\emlak\bin\Recaptcha.dll
+D:\Inetpub\proje\emlak\bin\System.Linq.Dynamic.dll
+D:\Inetpub\proje\emlak\bin\EntityFramework.xml
+D:\Inetpub\proje\emlak\bin\EntityFramework.SqlServer.xml
+D:\Inetpub\proje\emlak\bin\Recaptcha.pdb
+D:\Inetpub\proje\emlak\obj\Debug\emlak.dll
+D:\Inetpub\proje\emlak\obj\Debug\emlak.csprojResolveAssemblyReference.cache

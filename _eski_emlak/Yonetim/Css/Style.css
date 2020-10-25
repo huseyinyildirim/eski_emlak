@@ -1,0 +1,48 @@
+﻿body {background:#F0F0F0; font-family:Tahoma; font-size:12px; color:#333;}
+
+a {color:#333399;}
+
+.clear {clear:both;}
+.h10 {height:10px;}
+.mt10 {margin-top:10px;}
+.mb10 {margin-bottom:10px;}
+
+.ust {overflow:hidden;}
+.ust .sol {float:left; display:inline; margin:15px 0 15px 10px;}
+.ust .sag {float:right; display:inline; margin:15px 10px 15px 0;}
+
+.menu {overflow:hidden;}
+.menu ul {list-style:none; padding-left:10px; margin-top:10px;}
+.menu ul li {float:left; display:inline; margin-right:5px; padding:10px; background:#CCC; border-top:1px solid #999;}
+.menu ul li:hover {background:#FFF;}
+.menu ul li a {text-decoration:none; font-weight:bold; color:#666;}
+.menu ul li.secili {background:#FFF;}
+.menu ul li.secili a {color:#555;}
+
+.menualt {background:#FFF; overflow:hidden;}
+.menualt .menualtdetay {}
+.menualt .menualtdetay ul {list-style:none;}
+.menualt .menualtdetay ul li {float:left; display:inline; padding:15px;}
+.menualt .menualtdetay ul li a {text-decoration:none; color:#999;}
+.menualt .menualtdetay ul li a:hover {font-weight:bold;}
+
+.icerik {margin:10px;}
+
+.icerik .blokbaslik {padding:10px; background:#CCC url(../Image/blokbaslik.jpg) repeat-x top; font-weight:bold; color:#666;}
+.icerik .blokicerik {padding:10px; background:#FFF; border:1px dotted #CCC; border-top:none;}
+.icerik .blokkomut {text-align:right; font-size:11px;}
+.icerik .blokkomut select {font-size:9px;}
+
+fieldset {border:1px solid #CCC; padding:10px;}
+fieldset legend {font-weight:bold; padding:10px; border:1px solid #CCC;}
+
+/* Gridview Stilleri */
+table.gridstil {}
+table.gridstil tr {}
+table.gridstil th {padding:3px; border:1px solid #CCC; height:35px; background:#F0F0F0 url(../Image/tablobaslik.jpg) repeat-x top; color:#666;}
+table.gridstil th a {color:#666;}
+table.gridstil td {padding:3px; border:1px solid #CCC; height:25px; color:#333; font-size:11px;}
+
+/* Onay kutusu */
+.question {position:absolute; display:inline; text-align:center; width:174px; height:78px; font-size:13px; line-height:1.5em; background:url(../Image/bubble.png) left top no-repeat; padding:10px 0 0 0; text-shadow:0px 1px 0px #fff; margin-left:-7em; margin-top:-6em; opacity:0;}
+.yes, .cancel {margin-top:.5em; margin-right:.5em; cursor:pointer; display:inline-block; width:63px; height:21px; color:#fff; text-shadow:0px 1px 0px #000; background:url(../Image/button.png) left top no-repeat;}

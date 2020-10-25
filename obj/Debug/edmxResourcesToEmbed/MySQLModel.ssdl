@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MySQLDataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MySQLDataModelStoreContainer">
+    <EntitySet Name="elmah_error" EntityType="MySQLDataModel.Store.elmah_error" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_admin" EntityType="MySQLDataModel.Store.tbl_admin" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_anket" EntityType="MySQLDataModel.Store.tbl_anket" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_anket_ip" EntityType="MySQLDataModel.Store.tbl_anket_ip" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_anket_secenek" EntityType="MySQLDataModel.Store.tbl_anket_secenek" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ayar" EntityType="MySQLDataModel.Store.tbl_ayar" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_haber" EntityType="MySQLDataModel.Store.tbl_haber" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan" EntityType="MySQLDataModel.Store.tbl_ilan" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan_degisken" EntityType="MySQLDataModel.Store.tbl_ilan_degisken" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan_detay" EntityType="MySQLDataModel.Store.tbl_ilan_detay" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan_ozellik" EntityType="MySQLDataModel.Store.tbl_ilan_ozellik" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan_ozellik_2" EntityType="MySQLDataModel.Store.tbl_ilan_ozellik_2" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan_resim" EntityType="MySQLDataModel.Store.tbl_ilan_resim" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan_sabit" EntityType="MySQLDataModel.Store.tbl_ilan_sabit" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_ilan_sabit_2" EntityType="MySQLDataModel.Store.tbl_ilan_sabit_2" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_kategori" EntityType="MySQLDataModel.Store.tbl_kategori" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_link" EntityType="MySQLDataModel.Store.tbl_link" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_mesaj_kutu" EntityType="MySQLDataModel.Store.tbl_mesaj_kutu" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_musteri" EntityType="MySQLDataModel.Store.tbl_musteri" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_olay_giris_cikis" EntityType="MySQLDataModel.Store.tbl_olay_giris_cikis" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_olay_giris_hata" EntityType="MySQLDataModel.Store.tbl_olay_giris_hata" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_olay_islem" EntityType="MySQLDataModel.Store.tbl_olay_islem" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_parametre" EntityType="MySQLDataModel.Store.tbl_parametre" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_resim" EntityType="MySQLDataModel.Store.tbl_resim" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sayac" EntityType="MySQLDataModel.Store.tbl_sayac" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sayac_gunluk" EntityType="MySQLDataModel.Store.tbl_sayac_gunluk" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sayac_ip" EntityType="MySQLDataModel.Store.tbl_sayac_ip" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sayac_referans" EntityType="MySQLDataModel.Store.tbl_sayac_referans" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sayac_sayfa" EntityType="MySQLDataModel.Store.tbl_sayac_sayfa" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sayfa" EntityType="MySQLDataModel.Store.tbl_sayfa" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sehir" EntityType="MySQLDataModel.Store.tbl_sehir" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sehir_il" EntityType="MySQLDataModel.Store.tbl_sehir_il" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sehir_ilce" EntityType="MySQLDataModel.Store.tbl_sehir_ilce" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_sehir_semt" EntityType="MySQLDataModel.Store.tbl_sehir_semt" store:Type="Tables" Schema="emlak" />
+    <EntitySet Name="tbl_talep" EntityType="MySQLDataModel.Store.tbl_talep" store:Type="Tables" Schema="emlak" />
+    <AssociationSet Name="fk_admin_admin_id_ek" Association="MySQLDataModel.Store.fk_admin_admin_id_ek">
+      <End Role="tbl_admin" EntitySet="tbl_admin" />
+      <End Role="tbl_admin1" EntitySet="tbl_admin" />
+    </AssociationSet>
+    <AssociationSet Name="fk_admin_admin_id_gun" Association="MySQLDataModel.Store.fk_admin_admin_id_gun">
+      <End Role="tbl_admin" EntitySet="tbl_admin" />
+      <End Role="tbl_admin1" EntitySet="tbl_admin" />
+    </AssociationSet>
+    <AssociationSet Name="fk_anket_secenek_anket_id" Association="MySQLDataModel.Store.fk_anket_secenek_anket_id">
+      <End Role="tbl_anket" EntitySet="tbl_anket" />
+      <End Role="tbl_anket_secenek" EntitySet="tbl_anket_secenek" />
+    </AssociationSet>
+    <AssociationSet Name="fk_musteri_admin_id_ek" Association="MySQLDataModel.Store.fk_musteri_admin_id_ek">
+      <End Role="tbl_admin" EntitySet="tbl_admin" />
+      <End Role="tbl_musteri" EntitySet="tbl_musteri" />
+    </AssociationSet>
+    <AssociationSet Name="fk_musteri_admin_id_gun" Association="MySQLDataModel.Store.fk_musteri_admin_id_gun">
+      <End Role="tbl_admin" EntitySet="tbl_admin" />
+      <End Role="tbl_musteri" EntitySet="tbl_musteri" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="elmah_error">
+    <Key>
+      <PropertyRef Name="Sequence" />
+    </Key>
+    <Property Name="ErrorId" Type="guid" Nullable="false" />
+    <Property Name="Application" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="Host" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Source" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="Message" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="User" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StatusCode" Type="int" Nullable="false" />
+    <Property Name="TimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="Sequence" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AllXml" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="eposta" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="sifre" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="telefon" Type="varchar" MaxLength="255" />
+    <Property Name="son_giris" Type="datetime" />
+    <Property Name="son_ip" Type="varchar" MaxLength="255" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_anket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="text" Nullable="false" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_anket_ip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="anket_id" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tbl_anket_secenek">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="anket_id" Type="int" Nullable="false" />
+    <Property Name="secenek" Type="text" Nullable="false" />
+    <Property Name="oy" Type="int" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="date" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ayar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="text" />
+    <Property Name="anahtar" Type="text" />
+    <Property Name="aciklama" Type="text" />
+    <Property Name="kullanici" Type="varchar" MaxLength="255" />
+    <Property Name="sifre" Type="varchar" MaxLength="255" />
+    <Property Name="hakkimizda" Type="text" />
+    <Property Name="kural" Type="text" />
+    <Property Name="site_adres" Type="text" />
+    <Property Name="firma_adi" Type="varchar" MaxLength="1024" />
+    <Property Name="adres" Type="varchar" MaxLength="1024" />
+    <Property Name="telefon" Type="varchar" MaxLength="255" />
+    <Property Name="faks" Type="varchar" MaxLength="255" />
+    <Property Name="gsm" Type="varchar" MaxLength="255" />
+    <Property Name="eposta" Type="varchar" MaxLength="512" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_haber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="varchar" MaxLength="255" />
+    <Property Name="ozet" Type="text" />
+    <Property Name="detay" Type="text" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ilan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kat_id" Type="int" Nullable="false" />
+    <Property Name="ilan_tur" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="kod" Type="varchar" MaxLength="255" />
+    <Property Name="baslik" Type="text" Nullable="false" />
+    <Property Name="fiyat" Type="int" Nullable="false" />
+    <Property Name="fiyat_tur" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ilan_sure" Type="int" />
+    <Property Name="il_id" Type="int" Nullable="false" />
+    <Property Name="ilce_id" Type="int" Nullable="false" />
+    <Property Name="semt_id" Type="int" />
+    <Property Name="mevki" Type="varchar" MaxLength="255" />
+    <Property Name="adres" Type="text" />
+    <Property Name="adres_goster" Type="bool" Nullable="false" />
+    <Property Name="ozellik" Type="text" />
+    <Property Name="vitrin" Type="bool" Nullable="false" />
+    <Property Name="arsiv" Type="bool" Nullable="false" />
+    <Property Name="koordinat" Type="varchar" MaxLength="255" />
+    <Property Name="satis" Type="bool" Nullable="false" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ilan_degisken">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ust_id" Type="int" Nullable="false" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="deger" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ilan_detay">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ilan_id" Type="int" Nullable="false" />
+    <Property Name="sabit_id" Type="int" Nullable="false" />
+    <Property Name="deger" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ilan_ozellik">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ust_id" Type="int" Nullable="false" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ilan_ozellik_2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kat_id" Type="int" Nullable="false" />
+    <Property Name="ozellik_id" Type="int" Nullable="false" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ilan_resim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ilan_id" Type="int" Nullable="false" />
+    <Property Name="resim" Type="text" Nullable="false" />
+    <Property Name="varsayilan" Type="bool" Nullable="false" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ilan_sabit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sabit" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tbl_ilan_sabit_2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sabit_id" Type="int" Nullable="false" />
+    <Property Name="kat_id" Type="int" Nullable="false" />
+    <Property Name="ilan_degisken_id" Type="int" Nullable="false" />
+    <Property Name="tip" Type="varchar" MaxLength="255" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_kategori">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alt_menu" Type="bool" Nullable="false" />
+    <Property Name="sira" Type="int" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_link">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="512" />
+    <Property Name="link" Type="varchar" Nullable="false" MaxLength="1024" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_mesaj_kutu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="gonderen_id" Type="int" Nullable="false" />
+    <Property Name="alici_id" Type="int" Nullable="false" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="detay" Type="text" Nullable="false" />
+    <Property Name="okundu" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_musteri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="varchar" MaxLength="255" />
+    <Property Name="telefon" Type="varchar" MaxLength="255" />
+    <Property Name="adres" Type="text" />
+    <Property Name="not" Type="text" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_olay_giris_cikis">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kullanici_id" Type="int" />
+    <Property Name="islem" Type="varchar" MaxLength="255" />
+    <Property Name="ip" Type="varchar" MaxLength="255" />
+    <Property Name="all_http" Type="text" />
+    <Property Name="all_raw" Type="text" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_olay_giris_hata">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kullanici" Type="varchar" MaxLength="255" />
+    <Property Name="islem" Type="varchar" MaxLength="255" />
+    <Property Name="ip" Type="varchar" MaxLength="255" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_olay_islem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kullanici_id" Type="int" />
+    <Property Name="tablo" Type="varchar" MaxLength="255" />
+    <Property Name="islem" Type="varchar" MaxLength="255" />
+    <Property Name="kayit_id" Type="varchar" MaxLength="255" />
+    <Property Name="ip" Type="varchar" MaxLength="255" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_parametre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="firma" Type="varchar" MaxLength="500" />
+    <Property Name="telefon" Type="varchar" MaxLength="500" />
+    <Property Name="cep_telefon" Type="varchar" MaxLength="500" />
+    <Property Name="faks" Type="varchar" MaxLength="500" />
+    <Property Name="adres" Type="varchar" MaxLength="500" />
+    <Property Name="eposta" Type="varchar" MaxLength="255" />
+    <Property Name="site_adres" Type="varchar" MaxLength="255" />
+    <Property Name="smtp" Type="varchar" MaxLength="255" />
+    <Property Name="smtp_eposta" Type="varchar" MaxLength="255" />
+    <Property Name="smtp_eposta_sifre" Type="varchar" MaxLength="255" />
+    <Property Name="smtp_port" Type="varchar" MaxLength="255" />
+    <Property Name="seo_baslik" Type="varchar" MaxLength="255" />
+    <Property Name="seo_aciklama" Type="text" />
+    <Property Name="seo_anahtar" Type="text" />
+    <Property Name="facebook" Type="varchar" MaxLength="255" />
+    <Property Name="twitter" Type="varchar" MaxLength="255" />
+    <Property Name="guvenlik_kodu" Type="varchar" MaxLength="255" />
+    <Property Name="google_map_api" Type="varchar" MaxLength="255" />
+    <Property Name="recaptcha_public_key" Type="varchar" MaxLength="255" />
+    <Property Name="recaptcha_private_key" Type="varchar" MaxLength="255" />
+    <Property Name="yonetici_liste_kayit_sayi" Type="varchar" MaxLength="255" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_resim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ilan_id" Type="int" Nullable="false" />
+    <Property Name="url" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_sayac">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ip" Type="varchar" MaxLength="255" />
+    <Property Name="cogul" Type="int" />
+    <Property Name="agent" Type="varchar" MaxLength="255" />
+    <Property Name="tarayici" Type="varchar" MaxLength="255" />
+    <Property Name="isletim_sistemi" Type="varchar" MaxLength="255" />
+    <Property Name="dil" Type="varchar" MaxLength="255" />
+    <Property Name="referans" Type="varchar" MaxLength="500" />
+    <Property Name="ulke_kod" Type="varchar" MaxLength="255" />
+    <Property Name="ulke_ad" Type="varchar" MaxLength="255" />
+    <Property Name="il" Type="varchar" MaxLength="255" />
+    <Property Name="ilce" Type="varchar" MaxLength="255" />
+    <Property Name="enlem" Type="varchar" MaxLength="255" />
+    <Property Name="boylam" Type="varchar" MaxLength="255" />
+    <Property Name="bot" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_sayac_gunluk">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tekil" Type="int" Nullable="false" />
+    <Property Name="cogul" Type="int" Nullable="false" />
+    <Property Name="gun" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_sayac_ip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ip" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="toplam_ziyaret" Type="int" Nullable="false" />
+    <Property Name="ziyaret_ettigi_son_gun" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_sayac_referans">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="site" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="tam_adres" Type="varchar" Nullable="false" MaxLength="1024" />
+    <Property Name="toplam_ziyaret" Type="int" Nullable="false" />
+    <Property Name="ziyaret_ettigi_son_gun" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_sayac_sayfa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ip" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="sayfa" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="hit" Type="int" Nullable="false" />
+    <Property Name="tarih_ek" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_sayfa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ust_id" Type="int" />
+    <Property Name="baslik" Type="varchar" MaxLength="255" />
+    <Property Name="ozet" Type="text" />
+    <Property Name="detay" Type="text" />
+    <Property Name="ana_menu" Type="bool" Nullable="false" />
+    <Property Name="alt_menu" Type="bool" Nullable="false" />
+    <Property Name="sira" Type="int" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_sehir">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="alt_id" Type="int" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_sehir_il">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="varchar" MaxLength="255" />
+    <Property Name="plaka" Type="varchar" MaxLength="255" />
+    <Property Name="alan_kod" Type="varchar" MaxLength="255" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_sehir_ilce">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="il_id" Type="int" Nullable="false" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_sehir_semt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ilce_id" Type="int" Nullable="false" />
+    <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="onay" Type="bool" Nullable="false" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="admin_id_ek" Type="int" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_talep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="il_id" Type="int" Nullable="false" />
+    <Property Name="ilce_id" Type="int" Nullable="false" />
+    <Property Name="semt_id" Type="int" Nullable="false" />
+    <Property Name="kat_id" Type="int" Nullable="false" />
+    <Property Name="ilan_tur" Type="varchar" MaxLength="255" />
+    <Property Name="ad" Type="varchar" MaxLength="255" />
+    <Property Name="telefon" Type="varchar" MaxLength="255" />
+    <Property Name="eposta" Type="varchar" MaxLength="255" />
+    <Property Name="mesaj" Type="text" />
+    <Property Name="yonetici_mesaj" Type="text" />
+    <Property Name="ip" Type="varchar" MaxLength="255" />
+    <Property Name="durum" Type="varchar" MaxLength="255" />
+    <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+    <Property Name="tarih_gun" Type="datetime" />
+    <Property Name="admin_id_gun" Type="int" />
+  </EntityType>
+  <Association Name="fk_admin_admin_id_ek">
+    <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_admin1" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_admin">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_admin1">
+        <PropertyRef Name="admin_id_ek" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_admin_admin_id_gun">
+    <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_admin1" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_admin">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_admin1">
+        <PropertyRef Name="admin_id_gun" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_anket_secenek_anket_id">
+    <End Role="tbl_anket" Type="MySQLDataModel.Store.tbl_anket" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_anket_secenek" Type="MySQLDataModel.Store.tbl_anket_secenek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_anket">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_anket_secenek">
+        <PropertyRef Name="anket_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_musteri_admin_id_ek">
+    <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_musteri" Type="MySQLDataModel.Store.tbl_musteri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_admin">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_musteri">
+        <PropertyRef Name="admin_id_ek" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_musteri_admin_id_gun">
+    <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_musteri" Type="MySQLDataModel.Store.tbl_musteri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_admin">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_musteri">
+        <PropertyRef Name="admin_id_gun" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="elmah_GetErrorsXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="emlak">
+    <Parameter Name="App" Type="varchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="TotalCount" Type="int" Mode="Out" />
+  </Function>
+  <Function Name="elmah_GetErrorXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="emlak">
+    <Parameter Name="Id" Type="char" Mode="In" />
+    <Parameter Name="App" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="elmah_LogError" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="emlak">
+    <Parameter Name="ErrorId" Type="char" Mode="In" />
+    <Parameter Name="Application" Type="varchar" Mode="In" />
+    <Parameter Name="Host" Type="varchar" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="Source" Type="varchar" Mode="In" />
+    <Parameter Name="Message" Type="varchar" Mode="In" />
+    <Parameter Name="User" Type="varchar" Mode="In" />
+    <Parameter Name="AllXml" Type="text" Mode="In" />
+    <Parameter Name="StatusCode" Type="int" Mode="In" />
+    <Parameter Name="TimeUtc" Type="datetime" Mode="In" />
+  </Function>
+</Schema>

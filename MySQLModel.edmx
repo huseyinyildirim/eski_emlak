@@ -1,0 +1,1920 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MySQLDataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MySQLDataModelStoreContainer">
+          <EntitySet Name="elmah_error" EntityType="MySQLDataModel.Store.elmah_error" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_admin" EntityType="MySQLDataModel.Store.tbl_admin" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_anket" EntityType="MySQLDataModel.Store.tbl_anket" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_anket_ip" EntityType="MySQLDataModel.Store.tbl_anket_ip" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_anket_secenek" EntityType="MySQLDataModel.Store.tbl_anket_secenek" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ayar" EntityType="MySQLDataModel.Store.tbl_ayar" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_haber" EntityType="MySQLDataModel.Store.tbl_haber" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan" EntityType="MySQLDataModel.Store.tbl_ilan" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan_degisken" EntityType="MySQLDataModel.Store.tbl_ilan_degisken" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan_detay" EntityType="MySQLDataModel.Store.tbl_ilan_detay" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan_ozellik" EntityType="MySQLDataModel.Store.tbl_ilan_ozellik" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan_ozellik_2" EntityType="MySQLDataModel.Store.tbl_ilan_ozellik_2" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan_resim" EntityType="MySQLDataModel.Store.tbl_ilan_resim" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan_sabit" EntityType="MySQLDataModel.Store.tbl_ilan_sabit" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_ilan_sabit_2" EntityType="MySQLDataModel.Store.tbl_ilan_sabit_2" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_kategori" EntityType="MySQLDataModel.Store.tbl_kategori" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_link" EntityType="MySQLDataModel.Store.tbl_link" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_mesaj_kutu" EntityType="MySQLDataModel.Store.tbl_mesaj_kutu" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_musteri" EntityType="MySQLDataModel.Store.tbl_musteri" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_olay_giris_cikis" EntityType="MySQLDataModel.Store.tbl_olay_giris_cikis" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_olay_giris_hata" EntityType="MySQLDataModel.Store.tbl_olay_giris_hata" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_olay_islem" EntityType="MySQLDataModel.Store.tbl_olay_islem" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_parametre" EntityType="MySQLDataModel.Store.tbl_parametre" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_resim" EntityType="MySQLDataModel.Store.tbl_resim" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sayac" EntityType="MySQLDataModel.Store.tbl_sayac" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sayac_gunluk" EntityType="MySQLDataModel.Store.tbl_sayac_gunluk" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sayac_ip" EntityType="MySQLDataModel.Store.tbl_sayac_ip" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sayac_referans" EntityType="MySQLDataModel.Store.tbl_sayac_referans" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sayac_sayfa" EntityType="MySQLDataModel.Store.tbl_sayac_sayfa" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sayfa" EntityType="MySQLDataModel.Store.tbl_sayfa" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sehir" EntityType="MySQLDataModel.Store.tbl_sehir" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sehir_il" EntityType="MySQLDataModel.Store.tbl_sehir_il" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sehir_ilce" EntityType="MySQLDataModel.Store.tbl_sehir_ilce" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_sehir_semt" EntityType="MySQLDataModel.Store.tbl_sehir_semt" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="tbl_talep" EntityType="MySQLDataModel.Store.tbl_talep" store:Type="Tables" Schema="emlak" />
+          <AssociationSet Name="fk_admin_admin_id_ek" Association="MySQLDataModel.Store.fk_admin_admin_id_ek">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_admin1" EntitySet="tbl_admin" />
+          </AssociationSet>
+          <AssociationSet Name="fk_admin_admin_id_gun" Association="MySQLDataModel.Store.fk_admin_admin_id_gun">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_admin1" EntitySet="tbl_admin" />
+          </AssociationSet>
+          <AssociationSet Name="fk_anket_secenek_anket_id" Association="MySQLDataModel.Store.fk_anket_secenek_anket_id">
+            <End Role="tbl_anket" EntitySet="tbl_anket" />
+            <End Role="tbl_anket_secenek" EntitySet="tbl_anket_secenek" />
+          </AssociationSet>
+          <AssociationSet Name="fk_musteri_admin_id_ek" Association="MySQLDataModel.Store.fk_musteri_admin_id_ek">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_musteri" EntitySet="tbl_musteri" />
+          </AssociationSet>
+          <AssociationSet Name="fk_musteri_admin_id_gun" Association="MySQLDataModel.Store.fk_musteri_admin_id_gun">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_musteri" EntitySet="tbl_musteri" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="elmah_error">
+          <Key>
+            <PropertyRef Name="Sequence" />
+          </Key>
+          <Property Name="ErrorId" Type="guid" Nullable="false" />
+          <Property Name="Application" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="Host" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Source" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="Message" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="User" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="StatusCode" Type="int" Nullable="false" />
+          <Property Name="TimeUtc" Type="datetime" Nullable="false" />
+          <Property Name="Sequence" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AllXml" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="eposta" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="sifre" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="telefon" Type="varchar" MaxLength="255" />
+          <Property Name="son_giris" Type="datetime" />
+          <Property Name="son_ip" Type="varchar" MaxLength="255" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_anket">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="text" Nullable="false" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_anket_ip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="anket_id" Type="int" Nullable="false" />
+          <Property Name="ip" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tbl_anket_secenek">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="anket_id" Type="int" Nullable="false" />
+          <Property Name="secenek" Type="text" Nullable="false" />
+          <Property Name="oy" Type="int" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="date" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ayar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="text" />
+          <Property Name="anahtar" Type="text" />
+          <Property Name="aciklama" Type="text" />
+          <Property Name="kullanici" Type="varchar" MaxLength="255" />
+          <Property Name="sifre" Type="varchar" MaxLength="255" />
+          <Property Name="hakkimizda" Type="text" />
+          <Property Name="kural" Type="text" />
+          <Property Name="site_adres" Type="text" />
+          <Property Name="firma_adi" Type="varchar" MaxLength="1024" />
+          <Property Name="adres" Type="varchar" MaxLength="1024" />
+          <Property Name="telefon" Type="varchar" MaxLength="255" />
+          <Property Name="faks" Type="varchar" MaxLength="255" />
+          <Property Name="gsm" Type="varchar" MaxLength="255" />
+          <Property Name="eposta" Type="varchar" MaxLength="512" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_haber">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="varchar" MaxLength="255" />
+          <Property Name="ozet" Type="text" />
+          <Property Name="detay" Type="text" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ilan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="kat_id" Type="int" Nullable="false" />
+          <Property Name="ilan_tur" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="kod" Type="varchar" MaxLength="255" />
+          <Property Name="baslik" Type="text" Nullable="false" />
+          <Property Name="fiyat" Type="int" Nullable="false" />
+          <Property Name="fiyat_tur" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="ilan_sure" Type="int" />
+          <Property Name="il_id" Type="int" Nullable="false" />
+          <Property Name="ilce_id" Type="int" Nullable="false" />
+          <Property Name="semt_id" Type="int" />
+          <Property Name="mevki" Type="varchar" MaxLength="255" />
+          <Property Name="adres" Type="text" />
+          <Property Name="adres_goster" Type="bool" Nullable="false" />
+          <Property Name="ozellik" Type="text" />
+          <Property Name="vitrin" Type="bool" Nullable="false" />
+          <Property Name="arsiv" Type="bool" Nullable="false" />
+          <Property Name="koordinat" Type="varchar" MaxLength="255" />
+          <Property Name="satis" Type="bool" Nullable="false" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_degisken">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ust_id" Type="int" Nullable="false" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="deger" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_detay">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ilan_id" Type="int" Nullable="false" />
+          <Property Name="sabit_id" Type="int" Nullable="false" />
+          <Property Name="deger" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_ozellik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ust_id" Type="int" Nullable="false" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_ozellik_2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="kat_id" Type="int" Nullable="false" />
+          <Property Name="ozellik_id" Type="int" Nullable="false" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_resim">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ilan_id" Type="int" Nullable="false" />
+          <Property Name="resim" Type="text" Nullable="false" />
+          <Property Name="varsayilan" Type="bool" Nullable="false" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_sabit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sabit" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_sabit_2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sabit_id" Type="int" Nullable="false" />
+          <Property Name="kat_id" Type="int" Nullable="false" />
+          <Property Name="ilan_degisken_id" Type="int" Nullable="false" />
+          <Property Name="tip" Type="varchar" MaxLength="255" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_kategori">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="alt_menu" Type="bool" Nullable="false" />
+          <Property Name="sira" Type="int" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_link">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="512" />
+          <Property Name="link" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_mesaj_kutu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="gonderen_id" Type="int" Nullable="false" />
+          <Property Name="alici_id" Type="int" Nullable="false" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="detay" Type="text" Nullable="false" />
+          <Property Name="okundu" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_musteri">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="varchar" MaxLength="255" />
+          <Property Name="telefon" Type="varchar" MaxLength="255" />
+          <Property Name="adres" Type="text" />
+          <Property Name="not" Type="text" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_olay_giris_cikis">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_id" Type="int" />
+          <Property Name="islem" Type="varchar" MaxLength="255" />
+          <Property Name="ip" Type="varchar" MaxLength="255" />
+          <Property Name="all_http" Type="text" />
+          <Property Name="all_raw" Type="text" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_olay_giris_hata">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici" Type="varchar" MaxLength="255" />
+          <Property Name="islem" Type="varchar" MaxLength="255" />
+          <Property Name="ip" Type="varchar" MaxLength="255" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_olay_islem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_id" Type="int" />
+          <Property Name="tablo" Type="varchar" MaxLength="255" />
+          <Property Name="islem" Type="varchar" MaxLength="255" />
+          <Property Name="kayit_id" Type="varchar" MaxLength="255" />
+          <Property Name="ip" Type="varchar" MaxLength="255" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_parametre">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="firma" Type="varchar" MaxLength="500" />
+          <Property Name="telefon" Type="varchar" MaxLength="500" />
+          <Property Name="cep_telefon" Type="varchar" MaxLength="500" />
+          <Property Name="faks" Type="varchar" MaxLength="500" />
+          <Property Name="adres" Type="varchar" MaxLength="500" />
+          <Property Name="eposta" Type="varchar" MaxLength="255" />
+          <Property Name="site_adres" Type="varchar" MaxLength="255" />
+          <Property Name="smtp" Type="varchar" MaxLength="255" />
+          <Property Name="smtp_eposta" Type="varchar" MaxLength="255" />
+          <Property Name="smtp_eposta_sifre" Type="varchar" MaxLength="255" />
+          <Property Name="smtp_port" Type="varchar" MaxLength="255" />
+          <Property Name="seo_baslik" Type="varchar" MaxLength="255" />
+          <Property Name="seo_aciklama" Type="text" />
+          <Property Name="seo_anahtar" Type="text" />
+          <Property Name="facebook" Type="varchar" MaxLength="255" />
+          <Property Name="twitter" Type="varchar" MaxLength="255" />
+          <Property Name="guvenlik_kodu" Type="varchar" MaxLength="255" />
+          <Property Name="google_map_api" Type="varchar" MaxLength="255" />
+          <Property Name="recaptcha_public_key" Type="varchar" MaxLength="255" />
+          <Property Name="recaptcha_private_key" Type="varchar" MaxLength="255" />
+          <Property Name="yonetici_liste_kayit_sayi" Type="varchar" MaxLength="255" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_resim">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ilan_id" Type="int" Nullable="false" />
+          <Property Name="url" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="varchar" MaxLength="255" />
+          <Property Name="cogul" Type="int" />
+          <Property Name="agent" Type="varchar" MaxLength="255" />
+          <Property Name="tarayici" Type="varchar" MaxLength="255" />
+          <Property Name="isletim_sistemi" Type="varchar" MaxLength="255" />
+          <Property Name="dil" Type="varchar" MaxLength="255" />
+          <Property Name="referans" Type="varchar" MaxLength="500" />
+          <Property Name="ulke_kod" Type="varchar" MaxLength="255" />
+          <Property Name="ulke_ad" Type="varchar" MaxLength="255" />
+          <Property Name="il" Type="varchar" MaxLength="255" />
+          <Property Name="ilce" Type="varchar" MaxLength="255" />
+          <Property Name="enlem" Type="varchar" MaxLength="255" />
+          <Property Name="boylam" Type="varchar" MaxLength="255" />
+          <Property Name="bot" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_gunluk">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tekil" Type="int" Nullable="false" />
+          <Property Name="cogul" Type="int" Nullable="false" />
+          <Property Name="gun" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_ip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="toplam_ziyaret" Type="int" Nullable="false" />
+          <Property Name="ziyaret_ettigi_son_gun" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_referans">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="site" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="tam_adres" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="toplam_ziyaret" Type="int" Nullable="false" />
+          <Property Name="ziyaret_ettigi_son_gun" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_sayfa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="sayfa" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="hit" Type="int" Nullable="false" />
+          <Property Name="tarih_ek" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayfa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ust_id" Type="int" />
+          <Property Name="baslik" Type="varchar" MaxLength="255" />
+          <Property Name="ozet" Type="text" />
+          <Property Name="detay" Type="text" />
+          <Property Name="ana_menu" Type="bool" Nullable="false" />
+          <Property Name="alt_menu" Type="bool" Nullable="false" />
+          <Property Name="sira" Type="int" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_sehir">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="alt_id" Type="int" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_sehir_il">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="varchar" MaxLength="255" />
+          <Property Name="plaka" Type="varchar" MaxLength="255" />
+          <Property Name="alan_kod" Type="varchar" MaxLength="255" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_sehir_ilce">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="il_id" Type="int" Nullable="false" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_sehir_semt">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ilce_id" Type="int" Nullable="false" />
+          <Property Name="baslik" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="onay" Type="bool" Nullable="false" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="int" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_talep">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="il_id" Type="int" Nullable="false" />
+          <Property Name="ilce_id" Type="int" Nullable="false" />
+          <Property Name="semt_id" Type="int" Nullable="false" />
+          <Property Name="kat_id" Type="int" Nullable="false" />
+          <Property Name="ilan_tur" Type="varchar" MaxLength="255" />
+          <Property Name="ad" Type="varchar" MaxLength="255" />
+          <Property Name="telefon" Type="varchar" MaxLength="255" />
+          <Property Name="eposta" Type="varchar" MaxLength="255" />
+          <Property Name="mesaj" Type="text" />
+          <Property Name="yonetici_mesaj" Type="text" />
+          <Property Name="ip" Type="varchar" MaxLength="255" />
+          <Property Name="durum" Type="varchar" MaxLength="255" />
+          <Property Name="tarih_ek" Type="datetime" Nullable="false" />
+          <Property Name="tarih_gun" Type="datetime" />
+          <Property Name="admin_id_gun" Type="int" />
+        </EntityType>
+        <Association Name="fk_admin_admin_id_ek">
+          <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_admin1" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_admin1">
+              <PropertyRef Name="admin_id_ek" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_admin_admin_id_gun">
+          <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_admin1" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_admin1">
+              <PropertyRef Name="admin_id_gun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_anket_secenek_anket_id">
+          <End Role="tbl_anket" Type="MySQLDataModel.Store.tbl_anket" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_anket_secenek" Type="MySQLDataModel.Store.tbl_anket_secenek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_anket">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_anket_secenek">
+              <PropertyRef Name="anket_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_musteri_admin_id_ek">
+          <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_musteri" Type="MySQLDataModel.Store.tbl_musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_musteri">
+              <PropertyRef Name="admin_id_ek" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_musteri_admin_id_gun">
+          <End Role="tbl_admin" Type="MySQLDataModel.Store.tbl_admin" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_musteri" Type="MySQLDataModel.Store.tbl_musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_musteri">
+              <PropertyRef Name="admin_id_gun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="elmah_GetErrorsXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="emlak">
+          <Parameter Name="App" Type="varchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="TotalCount" Type="int" Mode="Out" />
+        </Function>
+        <Function Name="elmah_GetErrorXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="emlak">
+          <Parameter Name="Id" Type="char" Mode="In" />
+          <Parameter Name="App" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="elmah_LogError" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="emlak">
+          <Parameter Name="ErrorId" Type="char" Mode="In" />
+          <Parameter Name="Application" Type="varchar" Mode="In" />
+          <Parameter Name="Host" Type="varchar" Mode="In" />
+          <Parameter Name="Type" Type="varchar" Mode="In" />
+          <Parameter Name="Source" Type="varchar" Mode="In" />
+          <Parameter Name="Message" Type="varchar" Mode="In" />
+          <Parameter Name="User" Type="varchar" Mode="In" />
+          <Parameter Name="AllXml" Type="text" Mode="In" />
+          <Parameter Name="StatusCode" Type="int" Mode="In" />
+          <Parameter Name="TimeUtc" Type="datetime" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MySQLDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BaglantiCumlesi" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="elmah_error" EntityType="MySQLDataModel.elmah_error" />
+          <EntitySet Name="tbl_admin" EntityType="MySQLDataModel.tbl_admin" />
+          <EntitySet Name="tbl_anket" EntityType="MySQLDataModel.tbl_anket" />
+          <EntitySet Name="tbl_anket_ip" EntityType="MySQLDataModel.tbl_anket_ip" />
+          <EntitySet Name="tbl_anket_secenek" EntityType="MySQLDataModel.tbl_anket_secenek" />
+          <EntitySet Name="tbl_ayar" EntityType="MySQLDataModel.tbl_ayar" />
+          <EntitySet Name="tbl_haber" EntityType="MySQLDataModel.tbl_haber" />
+          <EntitySet Name="tbl_ilan" EntityType="MySQLDataModel.tbl_ilan" />
+          <EntitySet Name="tbl_ilan_degisken" EntityType="MySQLDataModel.tbl_ilan_degisken" />
+          <EntitySet Name="tbl_ilan_detay" EntityType="MySQLDataModel.tbl_ilan_detay" />
+          <EntitySet Name="tbl_ilan_ozellik" EntityType="MySQLDataModel.tbl_ilan_ozellik" />
+          <EntitySet Name="tbl_ilan_ozellik_2" EntityType="MySQLDataModel.tbl_ilan_ozellik_2" />
+          <EntitySet Name="tbl_ilan_resim" EntityType="MySQLDataModel.tbl_ilan_resim" />
+          <EntitySet Name="tbl_ilan_sabit" EntityType="MySQLDataModel.tbl_ilan_sabit" />
+          <EntitySet Name="tbl_ilan_sabit_2" EntityType="MySQLDataModel.tbl_ilan_sabit_2" />
+          <EntitySet Name="tbl_kategori" EntityType="MySQLDataModel.tbl_kategori" />
+          <EntitySet Name="tbl_link" EntityType="MySQLDataModel.tbl_link" />
+          <EntitySet Name="tbl_mesaj_kutu" EntityType="MySQLDataModel.tbl_mesaj_kutu" />
+          <EntitySet Name="tbl_musteri" EntityType="MySQLDataModel.tbl_musteri" />
+          <EntitySet Name="tbl_olay_giris_cikis" EntityType="MySQLDataModel.tbl_olay_giris_cikis" />
+          <EntitySet Name="tbl_olay_giris_hata" EntityType="MySQLDataModel.tbl_olay_giris_hata" />
+          <EntitySet Name="tbl_olay_islem" EntityType="MySQLDataModel.tbl_olay_islem" />
+          <EntitySet Name="tbl_parametre" EntityType="MySQLDataModel.tbl_parametre" />
+          <EntitySet Name="tbl_resim" EntityType="MySQLDataModel.tbl_resim" />
+          <EntitySet Name="tbl_sayac" EntityType="MySQLDataModel.tbl_sayac" />
+          <EntitySet Name="tbl_sayac_gunluk" EntityType="MySQLDataModel.tbl_sayac_gunluk" />
+          <EntitySet Name="tbl_sayac_ip" EntityType="MySQLDataModel.tbl_sayac_ip" />
+          <EntitySet Name="tbl_sayac_referans" EntityType="MySQLDataModel.tbl_sayac_referans" />
+          <EntitySet Name="tbl_sayac_sayfa" EntityType="MySQLDataModel.tbl_sayac_sayfa" />
+          <EntitySet Name="tbl_sayfa" EntityType="MySQLDataModel.tbl_sayfa" />
+          <EntitySet Name="tbl_sehir" EntityType="MySQLDataModel.tbl_sehir" />
+          <EntitySet Name="tbl_sehir_il" EntityType="MySQLDataModel.tbl_sehir_il" />
+          <EntitySet Name="tbl_sehir_ilce" EntityType="MySQLDataModel.tbl_sehir_ilce" />
+          <EntitySet Name="tbl_sehir_semt" EntityType="MySQLDataModel.tbl_sehir_semt" />
+          <EntitySet Name="tbl_talep" EntityType="MySQLDataModel.tbl_talep" />
+          <AssociationSet Name="fk_admin_admin_id_ek" Association="MySQLDataModel.fk_admin_admin_id_ek">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_admin1" EntitySet="tbl_admin" />
+          </AssociationSet>
+          <AssociationSet Name="fk_admin_admin_id_gun" Association="MySQLDataModel.fk_admin_admin_id_gun">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_admin1" EntitySet="tbl_admin" />
+          </AssociationSet>
+          <AssociationSet Name="fk_musteri_admin_id_ek" Association="MySQLDataModel.fk_musteri_admin_id_ek">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_musteri" EntitySet="tbl_musteri" />
+          </AssociationSet>
+          <AssociationSet Name="fk_musteri_admin_id_gun" Association="MySQLDataModel.fk_musteri_admin_id_gun">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_musteri" EntitySet="tbl_musteri" />
+          </AssociationSet>
+          <AssociationSet Name="fk_anket_secenek_anket_id" Association="MySQLDataModel.fk_anket_secenek_anket_id">
+            <End Role="tbl_anket" EntitySet="tbl_anket" />
+            <End Role="tbl_anket_secenek" EntitySet="tbl_anket_secenek" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="elmah_error">
+          <Key>
+            <PropertyRef Name="Sequence" />
+          </Key>
+          <Property Name="ErrorId" Type="Guid" Nullable="false" />
+          <Property Name="Application" Type="String" Nullable="false" />
+          <Property Name="Host" Type="String" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" />
+          <Property Name="Source" Type="String" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="false" />
+          <Property Name="User" Type="String" Nullable="false" />
+          <Property Name="StatusCode" Type="Int32" Nullable="false" />
+          <Property Name="TimeUtc" Type="DateTime" Nullable="false" />
+          <Property Name="Sequence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AllXml" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" Nullable="false" />
+          <Property Name="eposta" Type="String" Nullable="false" />
+          <Property Name="sifre" Type="String" Nullable="false" />
+          <Property Name="telefon" Type="String" />
+          <Property Name="son_giris" Type="DateTime" />
+          <Property Name="son_ip" Type="String" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+          <NavigationProperty Name="tbl_admin1" Relationship="MySQLDataModel.fk_admin_admin_id_ek" FromRole="tbl_admin" ToRole="tbl_admin1" />
+          <NavigationProperty Name="tbl_admin2" Relationship="MySQLDataModel.fk_admin_admin_id_ek" FromRole="tbl_admin1" ToRole="tbl_admin" />
+          <NavigationProperty Name="tbl_admin11" Relationship="MySQLDataModel.fk_admin_admin_id_gun" FromRole="tbl_admin" ToRole="tbl_admin1" />
+          <NavigationProperty Name="tbl_admin3" Relationship="MySQLDataModel.fk_admin_admin_id_gun" FromRole="tbl_admin1" ToRole="tbl_admin" />
+          <NavigationProperty Name="tbl_musteri" Relationship="MySQLDataModel.fk_musteri_admin_id_ek" FromRole="tbl_admin" ToRole="tbl_musteri" />
+          <NavigationProperty Name="tbl_musteri1" Relationship="MySQLDataModel.fk_musteri_admin_id_gun" FromRole="tbl_admin" ToRole="tbl_musteri" />
+        </EntityType>
+        <EntityType Name="tbl_anket">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+          <NavigationProperty Name="tbl_anket_secenek" Relationship="MySQLDataModel.fk_anket_secenek_anket_id" FromRole="tbl_anket" ToRole="tbl_anket_secenek" />
+        </EntityType>
+        <EntityType Name="tbl_anket_ip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="anket_id" Type="Int32" Nullable="false" />
+          <Property Name="ip" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_anket_secenek">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="anket_id" Type="Int32" Nullable="false" />
+          <Property Name="secenek" Type="String" Nullable="false" />
+          <Property Name="oy" Type="Int32" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+          <NavigationProperty Name="tbl_anket" Relationship="MySQLDataModel.fk_anket_secenek_anket_id" FromRole="tbl_anket_secenek" ToRole="tbl_anket" />
+        </EntityType>
+        <EntityType Name="tbl_ayar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="String" />
+          <Property Name="anahtar" Type="String" />
+          <Property Name="aciklama" Type="String" />
+          <Property Name="kullanici" Type="String" />
+          <Property Name="sifre" Type="String" />
+          <Property Name="hakkimizda" Type="String" />
+          <Property Name="kural" Type="String" />
+          <Property Name="site_adres" Type="String" />
+          <Property Name="firma_adi" Type="String" />
+          <Property Name="adres" Type="String" />
+          <Property Name="telefon" Type="String" />
+          <Property Name="faks" Type="String" />
+          <Property Name="gsm" Type="String" />
+          <Property Name="eposta" Type="String" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_haber">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="String" />
+          <Property Name="ozet" Type="String" />
+          <Property Name="detay" Type="String" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_ilan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kat_id" Type="Int32" Nullable="false" />
+          <Property Name="ilan_tur" Type="String" Nullable="false" />
+          <Property Name="kod" Type="String" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="fiyat" Type="Int32" Nullable="false" />
+          <Property Name="fiyat_tur" Type="String" Nullable="false" />
+          <Property Name="ilan_sure" Type="Int32" />
+          <Property Name="il_id" Type="Int32" Nullable="false" />
+          <Property Name="ilce_id" Type="Int32" Nullable="false" />
+          <Property Name="semt_id" Type="Int32" />
+          <Property Name="mevki" Type="String" />
+          <Property Name="adres" Type="String" />
+          <Property Name="adres_goster" Type="Boolean" Nullable="false" />
+          <Property Name="ozellik" Type="String" />
+          <Property Name="vitrin" Type="Boolean" Nullable="false" />
+          <Property Name="arsiv" Type="Boolean" Nullable="false" />
+          <Property Name="koordinat" Type="String" />
+          <Property Name="satis" Type="Boolean" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_degisken">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ust_id" Type="Int32" Nullable="false" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="deger" Type="String" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_detay">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilan_id" Type="Int32" Nullable="false" />
+          <Property Name="sabit_id" Type="Int32" Nullable="false" />
+          <Property Name="deger" Type="String" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_ozellik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ust_id" Type="Int32" Nullable="false" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_ozellik_2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kat_id" Type="Int32" Nullable="false" />
+          <Property Name="ozellik_id" Type="Int32" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_resim">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilan_id" Type="Int32" Nullable="false" />
+          <Property Name="resim" Type="String" Nullable="false" />
+          <Property Name="varsayilan" Type="Boolean" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_sabit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sabit" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_ilan_sabit_2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sabit_id" Type="Int32" Nullable="false" />
+          <Property Name="kat_id" Type="Int32" Nullable="false" />
+          <Property Name="ilan_degisken_id" Type="Int32" Nullable="false" />
+          <Property Name="tip" Type="String" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_kategori">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="alt_menu" Type="Boolean" Nullable="false" />
+          <Property Name="sira" Type="Int32" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_link">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_mesaj_kutu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gonderen_id" Type="Int32" Nullable="false" />
+          <Property Name="alici_id" Type="Int32" Nullable="false" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="detay" Type="String" Nullable="false" />
+          <Property Name="okundu" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_musteri">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" />
+          <Property Name="telefon" Type="String" />
+          <Property Name="adres" Type="String" />
+          <Property Name="not" Type="String" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+          <NavigationProperty Name="tbl_admin" Relationship="MySQLDataModel.fk_musteri_admin_id_ek" FromRole="tbl_musteri" ToRole="tbl_admin" />
+          <NavigationProperty Name="tbl_admin1" Relationship="MySQLDataModel.fk_musteri_admin_id_gun" FromRole="tbl_musteri" ToRole="tbl_admin" />
+        </EntityType>
+        <EntityType Name="tbl_olay_giris_cikis">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_id" Type="Int32" />
+          <Property Name="islem" Type="String" />
+          <Property Name="ip" Type="String" />
+          <Property Name="all_http" Type="String" />
+          <Property Name="all_raw" Type="String" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_olay_giris_hata">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici" Type="String" />
+          <Property Name="islem" Type="String" />
+          <Property Name="ip" Type="String" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_olay_islem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_id" Type="Int32" />
+          <Property Name="tablo" Type="String" />
+          <Property Name="islem" Type="String" />
+          <Property Name="kayit_id" Type="String" />
+          <Property Name="ip" Type="String" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_parametre">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firma" Type="String" />
+          <Property Name="telefon" Type="String" />
+          <Property Name="cep_telefon" Type="String" />
+          <Property Name="faks" Type="String" />
+          <Property Name="adres" Type="String" />
+          <Property Name="eposta" Type="String" />
+          <Property Name="site_adres" Type="String" />
+          <Property Name="smtp" Type="String" />
+          <Property Name="smtp_eposta" Type="String" />
+          <Property Name="smtp_eposta_sifre" Type="String" />
+          <Property Name="smtp_port" Type="String" />
+          <Property Name="seo_baslik" Type="String" />
+          <Property Name="seo_aciklama" Type="String" />
+          <Property Name="seo_anahtar" Type="String" />
+          <Property Name="facebook" Type="String" />
+          <Property Name="twitter" Type="String" />
+          <Property Name="guvenlik_kodu" Type="String" />
+          <Property Name="google_map_api" Type="String" />
+          <Property Name="recaptcha_public_key" Type="String" />
+          <Property Name="recaptcha_private_key" Type="String" />
+          <Property Name="yonetici_liste_kayit_sayi" Type="String" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_resim">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilan_id" Type="Int32" Nullable="false" />
+          <Property Name="url" Type="String" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="String" />
+          <Property Name="cogul" Type="Int32" />
+          <Property Name="agent" Type="String" />
+          <Property Name="tarayici" Type="String" />
+          <Property Name="isletim_sistemi" Type="String" />
+          <Property Name="dil" Type="String" />
+          <Property Name="referans" Type="String" />
+          <Property Name="ulke_kod" Type="String" />
+          <Property Name="ulke_ad" Type="String" />
+          <Property Name="il" Type="String" />
+          <Property Name="ilce" Type="String" />
+          <Property Name="enlem" Type="String" />
+          <Property Name="boylam" Type="String" />
+          <Property Name="bot" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_gunluk">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tekil" Type="Int32" Nullable="false" />
+          <Property Name="cogul" Type="Int32" Nullable="false" />
+          <Property Name="gun" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_ip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="String" Nullable="false" />
+          <Property Name="toplam_ziyaret" Type="Int32" Nullable="false" />
+          <Property Name="ziyaret_ettigi_son_gun" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_referans">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="site" Type="String" Nullable="false" />
+          <Property Name="tam_adres" Type="String" Nullable="false" />
+          <Property Name="toplam_ziyaret" Type="Int32" Nullable="false" />
+          <Property Name="ziyaret_ettigi_son_gun" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayac_sayfa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="String" Nullable="false" />
+          <Property Name="sayfa" Type="String" Nullable="false" />
+          <Property Name="hit" Type="Int32" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_sayfa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ust_id" Type="Int32" />
+          <Property Name="baslik" Type="String" />
+          <Property Name="ozet" Type="String" />
+          <Property Name="detay" Type="String" />
+          <Property Name="ana_menu" Type="Boolean" Nullable="false" />
+          <Property Name="alt_menu" Type="Boolean" Nullable="false" />
+          <Property Name="sira" Type="Int32" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_sehir">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="alt_id" Type="Int32" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_sehir_il">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="baslik" Type="String" />
+          <Property Name="plaka" Type="String" />
+          <Property Name="alan_kod" Type="String" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_sehir_ilce">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="il_id" Type="Int32" Nullable="false" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_sehir_semt">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilce_id" Type="Int32" Nullable="false" />
+          <Property Name="baslik" Type="String" Nullable="false" />
+          <Property Name="onay" Type="Boolean" Nullable="false" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="admin_id_ek" Type="Int32" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_talep">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="il_id" Type="Int32" Nullable="false" />
+          <Property Name="ilce_id" Type="Int32" Nullable="false" />
+          <Property Name="semt_id" Type="Int32" Nullable="false" />
+          <Property Name="kat_id" Type="Int32" Nullable="false" />
+          <Property Name="ilan_tur" Type="String" />
+          <Property Name="ad" Type="String" />
+          <Property Name="telefon" Type="String" />
+          <Property Name="eposta" Type="String" />
+          <Property Name="mesaj" Type="String" />
+          <Property Name="yonetici_mesaj" Type="String" />
+          <Property Name="ip" Type="String" />
+          <Property Name="durum" Type="String" />
+          <Property Name="tarih_ek" Type="DateTime" Nullable="false" />
+          <Property Name="tarih_gun" Type="DateTime" />
+          <Property Name="admin_id_gun" Type="Int32" />
+        </EntityType>
+        <Association Name="fk_admin_admin_id_ek">
+          <End Role="tbl_admin" Type="MySQLDataModel.tbl_admin" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_admin1" Type="MySQLDataModel.tbl_admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_admin1">
+              <PropertyRef Name="admin_id_ek" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_admin_admin_id_gun">
+          <End Role="tbl_admin" Type="MySQLDataModel.tbl_admin" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_admin1" Type="MySQLDataModel.tbl_admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_admin1">
+              <PropertyRef Name="admin_id_gun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_musteri_admin_id_ek">
+          <End Role="tbl_admin" Type="MySQLDataModel.tbl_admin" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_musteri" Type="MySQLDataModel.tbl_musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_musteri">
+              <PropertyRef Name="admin_id_ek" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_musteri_admin_id_gun">
+          <End Role="tbl_admin" Type="MySQLDataModel.tbl_admin" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_musteri" Type="MySQLDataModel.tbl_musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_musteri">
+              <PropertyRef Name="admin_id_gun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_anket_secenek_anket_id">
+          <End Role="tbl_anket" Type="MySQLDataModel.tbl_anket" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_anket_secenek" Type="MySQLDataModel.tbl_anket_secenek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_anket">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbl_anket_secenek">
+              <PropertyRef Name="anket_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MySQLDataModelStoreContainer" CdmEntityContainer="BaglantiCumlesi">
+          <EntitySetMapping Name="elmah_error">
+            <EntityTypeMapping TypeName="MySQLDataModel.elmah_error">
+              <MappingFragment StoreEntitySet="elmah_error">
+                <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="Host" ColumnName="Host" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+                <ScalarProperty Name="TimeUtc" ColumnName="TimeUtc" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="AllXml" ColumnName="AllXml" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_admin">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_admin">
+              <MappingFragment StoreEntitySet="tbl_admin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="eposta" ColumnName="eposta" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="son_giris" ColumnName="son_giris" />
+                <ScalarProperty Name="son_ip" ColumnName="son_ip" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_anket">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_anket">
+              <MappingFragment StoreEntitySet="tbl_anket">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_anket_ip">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_anket_ip">
+              <MappingFragment StoreEntitySet="tbl_anket_ip">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="anket_id" ColumnName="anket_id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_anket_secenek">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_anket_secenek">
+              <MappingFragment StoreEntitySet="tbl_anket_secenek">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="anket_id" ColumnName="anket_id" />
+                <ScalarProperty Name="secenek" ColumnName="secenek" />
+                <ScalarProperty Name="oy" ColumnName="oy" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ayar">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ayar">
+              <MappingFragment StoreEntitySet="tbl_ayar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="anahtar" ColumnName="anahtar" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="hakkimizda" ColumnName="hakkimizda" />
+                <ScalarProperty Name="kural" ColumnName="kural" />
+                <ScalarProperty Name="site_adres" ColumnName="site_adres" />
+                <ScalarProperty Name="firma_adi" ColumnName="firma_adi" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="faks" ColumnName="faks" />
+                <ScalarProperty Name="gsm" ColumnName="gsm" />
+                <ScalarProperty Name="eposta" ColumnName="eposta" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_haber">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_haber">
+              <MappingFragment StoreEntitySet="tbl_haber">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="ozet" ColumnName="ozet" />
+                <ScalarProperty Name="detay" ColumnName="detay" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan">
+              <MappingFragment StoreEntitySet="tbl_ilan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kat_id" ColumnName="kat_id" />
+                <ScalarProperty Name="ilan_tur" ColumnName="ilan_tur" />
+                <ScalarProperty Name="kod" ColumnName="kod" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+                <ScalarProperty Name="fiyat_tur" ColumnName="fiyat_tur" />
+                <ScalarProperty Name="ilan_sure" ColumnName="ilan_sure" />
+                <ScalarProperty Name="il_id" ColumnName="il_id" />
+                <ScalarProperty Name="ilce_id" ColumnName="ilce_id" />
+                <ScalarProperty Name="semt_id" ColumnName="semt_id" />
+                <ScalarProperty Name="mevki" ColumnName="mevki" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="adres_goster" ColumnName="adres_goster" />
+                <ScalarProperty Name="ozellik" ColumnName="ozellik" />
+                <ScalarProperty Name="vitrin" ColumnName="vitrin" />
+                <ScalarProperty Name="arsiv" ColumnName="arsiv" />
+                <ScalarProperty Name="koordinat" ColumnName="koordinat" />
+                <ScalarProperty Name="satis" ColumnName="satis" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan_degisken">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan_degisken">
+              <MappingFragment StoreEntitySet="tbl_ilan_degisken">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ust_id" ColumnName="ust_id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="deger" ColumnName="deger" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan_detay">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan_detay">
+              <MappingFragment StoreEntitySet="tbl_ilan_detay">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilan_id" ColumnName="ilan_id" />
+                <ScalarProperty Name="sabit_id" ColumnName="sabit_id" />
+                <ScalarProperty Name="deger" ColumnName="deger" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan_ozellik">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan_ozellik">
+              <MappingFragment StoreEntitySet="tbl_ilan_ozellik">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ust_id" ColumnName="ust_id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan_ozellik_2">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan_ozellik_2">
+              <MappingFragment StoreEntitySet="tbl_ilan_ozellik_2">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kat_id" ColumnName="kat_id" />
+                <ScalarProperty Name="ozellik_id" ColumnName="ozellik_id" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan_resim">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan_resim">
+              <MappingFragment StoreEntitySet="tbl_ilan_resim">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilan_id" ColumnName="ilan_id" />
+                <ScalarProperty Name="resim" ColumnName="resim" />
+                <ScalarProperty Name="varsayilan" ColumnName="varsayilan" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan_sabit">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan_sabit">
+              <MappingFragment StoreEntitySet="tbl_ilan_sabit">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sabit" ColumnName="sabit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ilan_sabit_2">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_ilan_sabit_2">
+              <MappingFragment StoreEntitySet="tbl_ilan_sabit_2">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sabit_id" ColumnName="sabit_id" />
+                <ScalarProperty Name="kat_id" ColumnName="kat_id" />
+                <ScalarProperty Name="ilan_degisken_id" ColumnName="ilan_degisken_id" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_kategori">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_kategori">
+              <MappingFragment StoreEntitySet="tbl_kategori">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="alt_menu" ColumnName="alt_menu" />
+                <ScalarProperty Name="sira" ColumnName="sira" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_link">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_link">
+              <MappingFragment StoreEntitySet="tbl_link">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_mesaj_kutu">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_mesaj_kutu">
+              <MappingFragment StoreEntitySet="tbl_mesaj_kutu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="gonderen_id" ColumnName="gonderen_id" />
+                <ScalarProperty Name="alici_id" ColumnName="alici_id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="detay" ColumnName="detay" />
+                <ScalarProperty Name="okundu" ColumnName="okundu" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_musteri">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_musteri">
+              <MappingFragment StoreEntitySet="tbl_musteri">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="not" ColumnName="not" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_olay_giris_cikis">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_olay_giris_cikis">
+              <MappingFragment StoreEntitySet="tbl_olay_giris_cikis">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+                <ScalarProperty Name="islem" ColumnName="islem" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="all_http" ColumnName="all_http" />
+                <ScalarProperty Name="all_raw" ColumnName="all_raw" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_olay_giris_hata">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_olay_giris_hata">
+              <MappingFragment StoreEntitySet="tbl_olay_giris_hata">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+                <ScalarProperty Name="islem" ColumnName="islem" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_olay_islem">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_olay_islem">
+              <MappingFragment StoreEntitySet="tbl_olay_islem">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+                <ScalarProperty Name="tablo" ColumnName="tablo" />
+                <ScalarProperty Name="islem" ColumnName="islem" />
+                <ScalarProperty Name="kayit_id" ColumnName="kayit_id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_parametre">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_parametre">
+              <MappingFragment StoreEntitySet="tbl_parametre">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="firma" ColumnName="firma" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="cep_telefon" ColumnName="cep_telefon" />
+                <ScalarProperty Name="faks" ColumnName="faks" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="eposta" ColumnName="eposta" />
+                <ScalarProperty Name="site_adres" ColumnName="site_adres" />
+                <ScalarProperty Name="smtp" ColumnName="smtp" />
+                <ScalarProperty Name="smtp_eposta" ColumnName="smtp_eposta" />
+                <ScalarProperty Name="smtp_eposta_sifre" ColumnName="smtp_eposta_sifre" />
+                <ScalarProperty Name="smtp_port" ColumnName="smtp_port" />
+                <ScalarProperty Name="seo_baslik" ColumnName="seo_baslik" />
+                <ScalarProperty Name="seo_aciklama" ColumnName="seo_aciklama" />
+                <ScalarProperty Name="seo_anahtar" ColumnName="seo_anahtar" />
+                <ScalarProperty Name="facebook" ColumnName="facebook" />
+                <ScalarProperty Name="twitter" ColumnName="twitter" />
+                <ScalarProperty Name="guvenlik_kodu" ColumnName="guvenlik_kodu" />
+                <ScalarProperty Name="google_map_api" ColumnName="google_map_api" />
+                <ScalarProperty Name="recaptcha_public_key" ColumnName="recaptcha_public_key" />
+                <ScalarProperty Name="recaptcha_private_key" ColumnName="recaptcha_private_key" />
+                <ScalarProperty Name="yonetici_liste_kayit_sayi" ColumnName="yonetici_liste_kayit_sayi" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_resim">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_resim">
+              <MappingFragment StoreEntitySet="tbl_resim">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilan_id" ColumnName="ilan_id" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sayac">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sayac">
+              <MappingFragment StoreEntitySet="tbl_sayac">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="cogul" ColumnName="cogul" />
+                <ScalarProperty Name="agent" ColumnName="agent" />
+                <ScalarProperty Name="tarayici" ColumnName="tarayici" />
+                <ScalarProperty Name="isletim_sistemi" ColumnName="isletim_sistemi" />
+                <ScalarProperty Name="dil" ColumnName="dil" />
+                <ScalarProperty Name="referans" ColumnName="referans" />
+                <ScalarProperty Name="ulke_kod" ColumnName="ulke_kod" />
+                <ScalarProperty Name="ulke_ad" ColumnName="ulke_ad" />
+                <ScalarProperty Name="il" ColumnName="il" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="enlem" ColumnName="enlem" />
+                <ScalarProperty Name="boylam" ColumnName="boylam" />
+                <ScalarProperty Name="bot" ColumnName="bot" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sayac_gunluk">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sayac_gunluk">
+              <MappingFragment StoreEntitySet="tbl_sayac_gunluk">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tekil" ColumnName="tekil" />
+                <ScalarProperty Name="cogul" ColumnName="cogul" />
+                <ScalarProperty Name="gun" ColumnName="gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sayac_ip">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sayac_ip">
+              <MappingFragment StoreEntitySet="tbl_sayac_ip">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="toplam_ziyaret" ColumnName="toplam_ziyaret" />
+                <ScalarProperty Name="ziyaret_ettigi_son_gun" ColumnName="ziyaret_ettigi_son_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sayac_referans">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sayac_referans">
+              <MappingFragment StoreEntitySet="tbl_sayac_referans">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="site" ColumnName="site" />
+                <ScalarProperty Name="tam_adres" ColumnName="tam_adres" />
+                <ScalarProperty Name="toplam_ziyaret" ColumnName="toplam_ziyaret" />
+                <ScalarProperty Name="ziyaret_ettigi_son_gun" ColumnName="ziyaret_ettigi_son_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sayac_sayfa">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sayac_sayfa">
+              <MappingFragment StoreEntitySet="tbl_sayac_sayfa">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="sayfa" ColumnName="sayfa" />
+                <ScalarProperty Name="hit" ColumnName="hit" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sayfa">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sayfa">
+              <MappingFragment StoreEntitySet="tbl_sayfa">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ust_id" ColumnName="ust_id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="ozet" ColumnName="ozet" />
+                <ScalarProperty Name="detay" ColumnName="detay" />
+                <ScalarProperty Name="ana_menu" ColumnName="ana_menu" />
+                <ScalarProperty Name="alt_menu" ColumnName="alt_menu" />
+                <ScalarProperty Name="sira" ColumnName="sira" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sehir">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sehir">
+              <MappingFragment StoreEntitySet="tbl_sehir">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="alt_id" ColumnName="alt_id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sehir_il">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sehir_il">
+              <MappingFragment StoreEntitySet="tbl_sehir_il">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="plaka" ColumnName="plaka" />
+                <ScalarProperty Name="alan_kod" ColumnName="alan_kod" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sehir_ilce">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sehir_ilce">
+              <MappingFragment StoreEntitySet="tbl_sehir_ilce">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="il_id" ColumnName="il_id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sehir_semt">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_sehir_semt">
+              <MappingFragment StoreEntitySet="tbl_sehir_semt">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilce_id" ColumnName="ilce_id" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="onay" ColumnName="onay" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="admin_id_ek" ColumnName="admin_id_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_talep">
+            <EntityTypeMapping TypeName="MySQLDataModel.tbl_talep">
+              <MappingFragment StoreEntitySet="tbl_talep">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="il_id" ColumnName="il_id" />
+                <ScalarProperty Name="ilce_id" ColumnName="ilce_id" />
+                <ScalarProperty Name="semt_id" ColumnName="semt_id" />
+                <ScalarProperty Name="kat_id" ColumnName="kat_id" />
+                <ScalarProperty Name="ilan_tur" ColumnName="ilan_tur" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="eposta" ColumnName="eposta" />
+                <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+                <ScalarProperty Name="yonetici_mesaj" ColumnName="yonetici_mesaj" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="durum" ColumnName="durum" />
+                <ScalarProperty Name="tarih_ek" ColumnName="tarih_ek" />
+                <ScalarProperty Name="tarih_gun" ColumnName="tarih_gun" />
+                <ScalarProperty Name="admin_id_gun" ColumnName="admin_id_gun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MySQLModel">
+        <EntityTypeShape EntityType="MySQLDataModel.elmah_error" Width="1.5" PointX="2.75" PointY="5.75" Height="3.1340950520833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_admin" Width="1.5" PointX="0.75" PointY="1" Height="4.480205078125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_anket" Width="1.5" PointX="5.75" PointY="1" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_anket_ip" Width="1.5" PointX="5.75" PointY="4.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_anket_secenek" Width="1.5" PointX="8" PointY="1" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ayar" Width="1.5" PointX="7.75" PointY="4.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_haber" Width="1.5" PointX="4.75" PointY="7.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan" Width="1.5" PointX="0.75" PointY="9.75" Height="5.6340136718750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan_degisken" Width="1.5" PointX="9.75" PointY="4.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan_detay" Width="1.5" PointX="9.75" PointY="8.75" Height="2.5571907552083353" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan_ozellik" Width="1.5" PointX="10.75" PointY="0.75" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan_ozellik_2" Width="1.5" PointX="6.75" PointY="10.75" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan_resim" Width="1.5" PointX="2.75" PointY="11.75" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan_sabit" Width="1.5" PointX="11.75" PointY="4.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_ilan_sabit_2" Width="1.5" PointX="11.75" PointY="7.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_kategori" Width="1.5" PointX="11.75" PointY="11.75" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_link" Width="1.5" PointX="12.75" PointY="0.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_mesaj_kutu" Width="1.5" PointX="8.75" PointY="12.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_musteri" Width="1.5" PointX="3" PointY="1.75" Height="3.1340950520833388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_olay_giris_cikis" Width="1.5" PointX="13.75" PointY="4.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_olay_giris_hata" Width="1.5" PointX="13.75" PointY="8.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_olay_islem" Width="1.5" PointX="13.75" PointY="11.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_parametre" Width="1.5" PointX="4.75" PointY="14.75" Height="6.0186165364583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_resim" Width="1.5" PointX="14.75" PointY="0.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sayac" Width="1.5" PointX="15.75" PointY="3.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sayac_gunluk" Width="1.5" PointX="15.75" PointY="8.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sayac_ip" Width="1.5" PointX="10.75" PointY="15.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sayac_referans" Width="1.5" PointX="15.75" PointY="11.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sayac_sayfa" Width="1.5" PointX="12.75" PointY="15.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sayfa" Width="1.5" PointX="15.75" PointY="14.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sehir" Width="1.5" PointX="0.75" PointY="16.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sehir_il" Width="1.5" PointX="6.75" PointY="16.75" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sehir_ilce" Width="1.5" PointX="17.75" PointY="0.75" Height="2.5571907552083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_sehir_semt" Width="1.5" PointX="17.75" PointY="4.75" Height="2.5571907552083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MySQLDataModel.tbl_talep" Width="1.5" PointX="17.75" PointY="8.75" Height="4.0956022135416674" IsExpanded="true" />
+        <AssociationConnector Association="MySQLDataModel.fk_admin_admin_id_ek" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.2819230769230767" PointY="5.480205078125" />
+          <ConnectorPoint PointX="1.2819230769230767" PointY="5.730205078125" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="5.730205078125" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="5.480205078125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.fk_admin_admin_id_gun" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.2819230769230767" PointY="1" />
+          <ConnectorPoint PointX="1.2819230769230767" PointY="0.75" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="0.75" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="1" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.fk_musteri_admin_id_ek" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.3170475260416694" />
+          <ConnectorPoint PointX="3" PointY="3.3170475260416694" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.fk_musteri_admin_id_gun" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.4710237630208347" />
+          <ConnectorPoint PointX="3" PointY="2.4710237630208347" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.fk_anket_secenek_anket_id" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="2.2785953776041659" />
+          <ConnectorPoint PointX="8" PointY="2.2785953776041659" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

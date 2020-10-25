@@ -1,0 +1,26 @@
+﻿/* Style for Usual tabs */
+.usual {width:960px;}
+.usual li {list-style:none; float:left;}
+.usual ul a {display:block; padding:6px 10px; text-decoration:none!important; margin:1px; margin-left:0; color:#FFF; background:#4966A1;}
+.usual ul a:hover {color:#FFF; background:#111;}
+.usual ul a.selected {margin-bottom:0; color:#000; background:#DDD; border-bottom:1px solid #DDD; cursor:default;}
+.usual .tablar {padding:10px 10px 8px 10px; margin-top:-15px; border:1px solid #DDD; clear:left;}
+
+.usual2 {width:100%;}
+.usual2 li {list-style:none; float:left;}
+.usual2 ul a {display:block; padding:6px 10px; text-decoration:none!important; margin:1px; margin-left:0; color:#FFF; background:#4966A1;}
+.usual2 ul a:hover {color:#FFF; background:#111;}
+.usual2 ul a.selected {margin-bottom:0; color:#000; background:#DDD; border-bottom:1px solid #DDD; cursor:default;}
+.usual2 .tablar {padding:10px 10px 8px 10px; margin-top:-15px; border:1px solid #DDD; clear:left;}
+
+
+#usual2 {background:#0A0A0A; border:1px solid #1A1A1A;}
+#usual2 a {background:#222;}
+#usual2 a:hover {background:#000;}
+#usual2 a.selected {background:snow;}
+#tabs3 {background:#FF9;}
+
+/* idTips */
+#idTip {border:1px solid #222; border-left:none; border-right:none; background:#000; padding:1px 8px 4px; margin:6px 2px; opacity:0.9;}
+#info {font-style:italic; font-size:0.8em; color:#888;}
+#idTip #info {color:#FFF; font-size:1em;}

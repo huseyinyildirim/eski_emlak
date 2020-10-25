@@ -1,0 +1,3448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MySQLDataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MySQLDataModelStoreContainer">
+          <EntitySet Name="haber" EntityType="MySQLDataModel.Store.haber" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan" EntityType="MySQLDataModel.Store.ilan" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan_degisken" EntityType="MySQLDataModel.Store.ilan_degisken" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan_detay" EntityType="MySQLDataModel.Store.ilan_detay" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan_ozellik" EntityType="MySQLDataModel.Store.ilan_ozellik" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan_ozellik2" EntityType="MySQLDataModel.Store.ilan_ozellik2" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan_resim" EntityType="MySQLDataModel.Store.ilan_resim" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan_sabit" EntityType="MySQLDataModel.Store.ilan_sabit" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="ilan_sabit2" EntityType="MySQLDataModel.Store.ilan_sabit2" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="kategori" EntityType="MySQLDataModel.Store.kategori" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="kullanici" EntityType="MySQLDataModel.Store.kullanici" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="mesaj_kutu" EntityType="MySQLDataModel.Store.mesaj_kutu" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="musteri" EntityType="MySQLDataModel.Store.musteri" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="olay_giriscikis" EntityType="MySQLDataModel.Store.olay_giriscikis" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="olay_girishata" EntityType="MySQLDataModel.Store.olay_girishata" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="olay_islem" EntityType="MySQLDataModel.Store.olay_islem" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="parametre" EntityType="MySQLDataModel.Store.parametre" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="sayac" EntityType="MySQLDataModel.Store.sayac" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="sayac_sayfa" EntityType="MySQLDataModel.Store.sayac_sayfa" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="sayfa" EntityType="MySQLDataModel.Store.sayfa" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="sehir_il" EntityType="MySQLDataModel.Store.sehir_il" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="sehir_ilce" EntityType="MySQLDataModel.Store.sehir_ilce" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="sehir_semt" EntityType="MySQLDataModel.Store.sehir_semt" store:Type="Tables" Schema="emlak" />
+          <EntitySet Name="talep" EntityType="MySQLDataModel.Store.talep" store:Type="Tables" Schema="emlak" />
+          <AssociationSet Name="haber_ibfk_1" Association="MySQLDataModel.Store.haber_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="haber" EntitySet="haber" />
+          </AssociationSet>
+          <AssociationSet Name="haber_ibfk_2" Association="MySQLDataModel.Store.haber_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="haber" EntitySet="haber" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_degisken_ibfk_1" Association="MySQLDataModel.Store.ilan_degisken_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_degisken" EntitySet="ilan_degisken" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_degisken_ibfk_2" Association="MySQLDataModel.Store.ilan_degisken_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_degisken" EntitySet="ilan_degisken" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_1" Association="MySQLDataModel.Store.ilan_detay_ibfk_1">
+            <End Role="ilan" EntitySet="ilan" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_2" Association="MySQLDataModel.Store.ilan_detay_ibfk_2">
+            <End Role="ilan_sabit" EntitySet="ilan_sabit" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_3" Association="MySQLDataModel.Store.ilan_detay_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_4" Association="MySQLDataModel.Store.ilan_detay_ibfk_4">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ibfk_1" Association="MySQLDataModel.Store.ilan_ibfk_1">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="ilan" EntitySet="ilan" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ibfk_2" Association="MySQLDataModel.Store.ilan_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan" EntitySet="ilan" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ibfk_3" Association="MySQLDataModel.Store.ilan_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan" EntitySet="ilan" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik_ibfk_1" Association="MySQLDataModel.Store.ilan_ozellik_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik" EntitySet="ilan_ozellik" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik_ibfk_2" Association="MySQLDataModel.Store.ilan_ozellik_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik" EntitySet="ilan_ozellik" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_1" Association="MySQLDataModel.Store.ilan_ozellik2_ibfk_1">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_2" Association="MySQLDataModel.Store.ilan_ozellik2_ibfk_2">
+            <End Role="ilan_ozellik" EntitySet="ilan_ozellik" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_3" Association="MySQLDataModel.Store.ilan_ozellik2_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_4" Association="MySQLDataModel.Store.ilan_ozellik2_ibfk_4">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_resim_ibfk_1" Association="MySQLDataModel.Store.ilan_resim_ibfk_1">
+            <End Role="ilan" EntitySet="ilan" />
+            <End Role="ilan_resim" EntitySet="ilan_resim" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_resim_ibfk_2" Association="MySQLDataModel.Store.ilan_resim_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_resim" EntitySet="ilan_resim" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_resim_ibfk_3" Association="MySQLDataModel.Store.ilan_resim_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_resim" EntitySet="ilan_resim" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_1" Association="MySQLDataModel.Store.ilan_sabit2_ibfk_1">
+            <End Role="ilan_sabit" EntitySet="ilan_sabit" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_2" Association="MySQLDataModel.Store.ilan_sabit2_ibfk_2">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_3" Association="MySQLDataModel.Store.ilan_sabit2_ibfk_3">
+            <End Role="ilan_degisken" EntitySet="ilan_degisken" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_4" Association="MySQLDataModel.Store.ilan_sabit2_ibfk_4">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_5" Association="MySQLDataModel.Store.ilan_sabit2_ibfk_5">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="kategori_ibfk_1" Association="MySQLDataModel.Store.kategori_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kategori" EntitySet="kategori" />
+          </AssociationSet>
+          <AssociationSet Name="kategori_ibfk_2" Association="MySQLDataModel.Store.kategori_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kategori" EntitySet="kategori" />
+          </AssociationSet>
+          <AssociationSet Name="kullanici_ibfk_1" Association="MySQLDataModel.Store.kullanici_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kullanici1" EntitySet="kullanici" />
+          </AssociationSet>
+          <AssociationSet Name="kullanici_ibfk_2" Association="MySQLDataModel.Store.kullanici_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kullanici1" EntitySet="kullanici" />
+          </AssociationSet>
+          <AssociationSet Name="mesaj_kutu_ibfk_1" Association="MySQLDataModel.Store.mesaj_kutu_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="mesaj_kutu" EntitySet="mesaj_kutu" />
+          </AssociationSet>
+          <AssociationSet Name="mesaj_kutu_ibfk_2" Association="MySQLDataModel.Store.mesaj_kutu_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="mesaj_kutu" EntitySet="mesaj_kutu" />
+          </AssociationSet>
+          <AssociationSet Name="musteri_ibfk_1" Association="MySQLDataModel.Store.musteri_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="musteri" EntitySet="musteri" />
+          </AssociationSet>
+          <AssociationSet Name="musteri_ibfk_2" Association="MySQLDataModel.Store.musteri_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="musteri" EntitySet="musteri" />
+          </AssociationSet>
+          <AssociationSet Name="olay_giriscikis_ibfk_1" Association="MySQLDataModel.Store.olay_giriscikis_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="olay_giriscikis" EntitySet="olay_giriscikis" />
+          </AssociationSet>
+          <AssociationSet Name="olay_islem_ibfk_1" Association="MySQLDataModel.Store.olay_islem_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="olay_islem" EntitySet="olay_islem" />
+          </AssociationSet>
+          <AssociationSet Name="parametre_ibfk_1" Association="MySQLDataModel.Store.parametre_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="parametre" EntitySet="parametre" />
+          </AssociationSet>
+          <AssociationSet Name="parametre_ibfk_2" Association="MySQLDataModel.Store.parametre_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="parametre" EntitySet="parametre" />
+          </AssociationSet>
+          <AssociationSet Name="sayfa_ibfk_1" Association="MySQLDataModel.Store.sayfa_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sayfa" EntitySet="sayfa" />
+          </AssociationSet>
+          <AssociationSet Name="sayfa_ibfk_2" Association="MySQLDataModel.Store.sayfa_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sayfa" EntitySet="sayfa" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_il_ibfk_1" Association="MySQLDataModel.Store.sehir_il_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_il" EntitySet="sehir_il" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_il_ibfk_2" Association="MySQLDataModel.Store.sehir_il_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_il" EntitySet="sehir_il" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_ilce_ibfk_1" Association="MySQLDataModel.Store.sehir_ilce_ibfk_1">
+            <End Role="sehir_il" EntitySet="sehir_il" />
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_ilce_ibfk_2" Association="MySQLDataModel.Store.sehir_ilce_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_ilce_ibfk_3" Association="MySQLDataModel.Store.sehir_ilce_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_semt_ibfk_1" Association="MySQLDataModel.Store.sehir_semt_ibfk_1">
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_semt_ibfk_2" Association="MySQLDataModel.Store.sehir_semt_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_semt_ibfk_3" Association="MySQLDataModel.Store.sehir_semt_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_1" Association="MySQLDataModel.Store.talep_ibfk_1">
+            <End Role="sehir_il" EntitySet="sehir_il" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_2" Association="MySQLDataModel.Store.talep_ibfk_2">
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_3" Association="MySQLDataModel.Store.talep_ibfk_3">
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_4" Association="MySQLDataModel.Store.talep_ibfk_4">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_5" Association="MySQLDataModel.Store.talep_ibfk_5">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="haber">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Ozet" Type="text" />
+          <Property Name="Detay" Type="text" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="ilan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="KatID" Type="int" />
+          <Property Name="IlanTur" Type="varchar" MaxLength="255" />
+          <Property Name="Kod" Type="varchar" MaxLength="255" />
+          <Property Name="Baslik" Type="text" />
+          <Property Name="Fiyat" Type="int" />
+          <Property Name="FiyatTur" Type="varchar" MaxLength="255" />
+          <Property Name="IlanSure" Type="int" />
+          <Property Name="Il" Type="int" />
+          <Property Name="Ilce" Type="int" />
+          <Property Name="Semt" Type="int" />
+          <Property Name="Mevki" Type="varchar" MaxLength="255" />
+          <Property Name="Adres" Type="text" />
+          <Property Name="AdresGoster" Type="int" />
+          <Property Name="Ozellik" Type="text" />
+          <Property Name="Vitrin" Type="int" />
+          <Property Name="Arsiv" Type="int" />
+          <Property Name="Koordinat" Type="varchar" MaxLength="255" />
+          <Property Name="Satis" Type="int" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="ilan_degisken">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UstID" Type="int" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Değer" Type="varchar" MaxLength="255" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="ilan_detay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IlanID" Type="int" />
+          <Property Name="SabitID" Type="int" />
+          <Property Name="Deger" Type="varchar" MaxLength="255" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="ilan_ozellik">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UstID" Type="int" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="ilan_ozellik2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="KatID" Type="int" />
+          <Property Name="OzellikID" Type="int" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="ilan_resim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IlanID" Type="int" />
+          <Property Name="Resim" Type="text" />
+          <Property Name="Varsayilan" Type="int" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="ilan_sabit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Sabit" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ilan_sabit2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SabitID" Type="int" />
+          <Property Name="KatID" Type="int" />
+          <Property Name="Tip" Type="varchar" MaxLength="255" />
+          <Property Name="IlanDegiskenID" Type="int" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="kategori">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="AltMenu" Type="int" />
+          <Property Name="Sira" Type="int" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="kullanici">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="varchar" MaxLength="255" />
+          <Property Name="EPosta" Type="varchar" MaxLength="255" />
+          <Property Name="Sifre" Type="varchar" MaxLength="255" />
+          <Property Name="Telefon" Type="varchar" MaxLength="255" />
+          <Property Name="SonGiris" Type="datetime" />
+          <Property Name="SonIP" Type="varchar" MaxLength="255" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="mesaj_kutu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GonderenID" Type="int" />
+          <Property Name="AliciID" Type="int" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Detay" Type="text" />
+          <Property Name="Okundu" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+        </EntityType>
+        <EntityType Name="musteri">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="varchar" MaxLength="255" />
+          <Property Name="Telefon" Type="varchar" MaxLength="255" />
+          <Property Name="Adres" Type="text" />
+          <Property Name="Not" Type="text" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="olay_giriscikis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciID" Type="int" />
+          <Property Name="Islem" Type="varchar" MaxLength="255" />
+          <Property Name="Ip" Type="varchar" MaxLength="255" />
+          <Property Name="All_http" Type="text" />
+          <Property Name="All_raw" Type="text" />
+          <Property Name="KayitTarih" Type="datetime" />
+        </EntityType>
+        <EntityType Name="olay_girishata">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Kullanici" Type="varchar" MaxLength="255" />
+          <Property Name="Islem" Type="varchar" MaxLength="255" />
+          <Property Name="Ip" Type="varchar" MaxLength="255" />
+          <Property Name="KayitTarih" Type="datetime" />
+        </EntityType>
+        <EntityType Name="olay_islem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciID" Type="int" />
+          <Property Name="Tablo" Type="varchar" MaxLength="255" />
+          <Property Name="Islem" Type="varchar" MaxLength="255" />
+          <Property Name="KayıtID" Type="varchar" MaxLength="255" />
+          <Property Name="Ip" Type="varchar" MaxLength="255" />
+          <Property Name="KayitTarih" Type="datetime" />
+        </EntityType>
+        <EntityType Name="parametre">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Firma" Type="varchar" MaxLength="500" />
+          <Property Name="Telefon" Type="varchar" MaxLength="500" />
+          <Property Name="CepTelefon" Type="varchar" MaxLength="500" />
+          <Property Name="Faks" Type="varchar" MaxLength="500" />
+          <Property Name="Adres" Type="varchar" MaxLength="500" />
+          <Property Name="EPosta" Type="varchar" MaxLength="255" />
+          <Property Name="SiteAdres" Type="varchar" MaxLength="255" />
+          <Property Name="Smtp" Type="varchar" MaxLength="255" />
+          <Property Name="SmtpEPosta" Type="varchar" MaxLength="255" />
+          <Property Name="SmtpEPostaSifre" Type="varchar" MaxLength="255" />
+          <Property Name="SmtpPort" Type="varchar" MaxLength="255" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Aciklama" Type="text" />
+          <Property Name="Anahtar" Type="text" />
+          <Property Name="Facebook" Type="varchar" MaxLength="255" />
+          <Property Name="Twitter" Type="varchar" MaxLength="255" />
+          <Property Name="GuvenlikKodu" Type="varchar" MaxLength="255" />
+          <Property Name="GoogleMapApi" Type="varchar" MaxLength="255" />
+          <Property Name="ReCaptchaPublicKey" Type="varchar" MaxLength="255" />
+          <Property Name="ReCaptchaPrivateKey" Type="varchar" MaxLength="255" />
+          <Property Name="YoneticiListeKayitSayi" Type="varchar" MaxLength="255" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="sayac">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ip" Type="varchar" MaxLength="255" />
+          <Property Name="Cogul" Type="int" />
+          <Property Name="Agent" Type="varchar" MaxLength="255" />
+          <Property Name="Tarayici" Type="varchar" MaxLength="255" />
+          <Property Name="IsletimSistemi" Type="varchar" MaxLength="255" />
+          <Property Name="Dil" Type="varchar" MaxLength="255" />
+          <Property Name="Referans" Type="varchar" MaxLength="500" />
+          <Property Name="UlkeKod" Type="varchar" MaxLength="255" />
+          <Property Name="UlkeAd" Type="varchar" MaxLength="255" />
+          <Property Name="Il" Type="varchar" MaxLength="255" />
+          <Property Name="Ilce" Type="varchar" MaxLength="255" />
+          <Property Name="Enlem" Type="varchar" MaxLength="255" />
+          <Property Name="Boylam" Type="varchar" MaxLength="255" />
+          <Property Name="Bot" Type="int" />
+          <Property Name="Tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="sayac_sayfa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ip" Type="varchar" MaxLength="255" />
+          <Property Name="Sayfa" Type="varchar" MaxLength="255" />
+          <Property Name="Hit" Type="int" />
+          <Property Name="Tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="sayfa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UstID" Type="int" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Ozet" Type="text" />
+          <Property Name="Detay" Type="text" />
+          <Property Name="AnaMenu" Type="int" />
+          <Property Name="AltMenu" Type="int" />
+          <Property Name="Sira" Type="int" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="sehir_il">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Plaka" Type="varchar" MaxLength="255" />
+          <Property Name="AlanKod" Type="varchar" MaxLength="255" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="sehir_ilce">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IlID" Type="int" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="sehir_semt">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IlceID" Type="int" />
+          <Property Name="Baslik" Type="varchar" MaxLength="255" />
+          <Property Name="Onay" Type="int" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="EkleyenID" Type="int" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <EntityType Name="talep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Il" Type="int" />
+          <Property Name="Ilce" Type="int" />
+          <Property Name="Semt" Type="int" />
+          <Property Name="KatID" Type="int" />
+          <Property Name="IlanTur" Type="varchar" MaxLength="255" />
+          <Property Name="Adi" Type="varchar" MaxLength="255" />
+          <Property Name="Telefon" Type="varchar" MaxLength="255" />
+          <Property Name="EPosta" Type="varchar" MaxLength="255" />
+          <Property Name="Mesaj" Type="text" />
+          <Property Name="YoneticiMesaj" Type="text" />
+          <Property Name="IPAdres" Type="varchar" MaxLength="255" />
+          <Property Name="Durum" Type="varchar" MaxLength="255" />
+          <Property Name="KayitTarih" Type="datetime" />
+          <Property Name="DegisTarih" Type="datetime" />
+          <Property Name="GuncelleyenID" Type="int" />
+        </EntityType>
+        <Association Name="haber_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="haber" Type="MySQLDataModel.Store.haber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="haber">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="haber_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="haber" Type="MySQLDataModel.Store.haber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="haber">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_degisken_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_degisken" Type="MySQLDataModel.Store.ilan_degisken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_degisken">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_degisken_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_degisken" Type="MySQLDataModel.Store.ilan_degisken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_degisken">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_1">
+          <End Role="ilan" Type="MySQLDataModel.Store.ilan" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ilan_detay" Type="MySQLDataModel.Store.ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="IlanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_2">
+          <End Role="ilan_sabit" Type="MySQLDataModel.Store.ilan_sabit" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ilan_detay" Type="MySQLDataModel.Store.ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_sabit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="SabitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_3">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ilan_detay" Type="MySQLDataModel.Store.ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_4">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ilan_detay" Type="MySQLDataModel.Store.ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ibfk_1">
+          <End Role="kategori" Type="MySQLDataModel.Store.kategori" Multiplicity="0..1" />
+          <End Role="ilan" Type="MySQLDataModel.Store.ilan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan" Type="MySQLDataModel.Store.ilan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ibfk_3">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan" Type="MySQLDataModel.Store.ilan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_ozellik" Type="MySQLDataModel.Store.ilan_ozellik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_ozellik" Type="MySQLDataModel.Store.ilan_ozellik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_1">
+          <End Role="kategori" Type="MySQLDataModel.Store.kategori" Multiplicity="0..1" />
+          <End Role="ilan_ozellik2" Type="MySQLDataModel.Store.ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_2">
+          <End Role="ilan_ozellik" Type="MySQLDataModel.Store.ilan_ozellik" Multiplicity="0..1" />
+          <End Role="ilan_ozellik2" Type="MySQLDataModel.Store.ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_ozellik">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="OzellikID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_3">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_ozellik2" Type="MySQLDataModel.Store.ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_4">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_ozellik2" Type="MySQLDataModel.Store.ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_resim_ibfk_1">
+          <End Role="ilan" Type="MySQLDataModel.Store.ilan" Multiplicity="0..1" />
+          <End Role="ilan_resim" Type="MySQLDataModel.Store.ilan_resim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_resim">
+              <PropertyRef Name="IlanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_resim_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_resim" Type="MySQLDataModel.Store.ilan_resim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_resim">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_resim_ibfk_3">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_resim" Type="MySQLDataModel.Store.ilan_resim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_resim">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_1">
+          <End Role="ilan_sabit" Type="MySQLDataModel.Store.ilan_sabit" Multiplicity="0..1" />
+          <End Role="ilan_sabit2" Type="MySQLDataModel.Store.ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_sabit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="SabitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_2">
+          <End Role="kategori" Type="MySQLDataModel.Store.kategori" Multiplicity="0..1" />
+          <End Role="ilan_sabit2" Type="MySQLDataModel.Store.ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_3">
+          <End Role="ilan_degisken" Type="MySQLDataModel.Store.ilan_degisken" Multiplicity="0..1" />
+          <End Role="ilan_sabit2" Type="MySQLDataModel.Store.ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_degisken">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="IlanDegiskenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_4">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_sabit2" Type="MySQLDataModel.Store.ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_5">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="ilan_sabit2" Type="MySQLDataModel.Store.ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kategori_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="kategori" Type="MySQLDataModel.Store.kategori" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kategori">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kategori_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="kategori" Type="MySQLDataModel.Store.kategori" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kategori">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kullanici_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="kullanici1" Type="MySQLDataModel.Store.kullanici" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kullanici1">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kullanici_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="kullanici1" Type="MySQLDataModel.Store.kullanici" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kullanici1">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="mesaj_kutu_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="mesaj_kutu" Type="MySQLDataModel.Store.mesaj_kutu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mesaj_kutu">
+              <PropertyRef Name="GonderenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="mesaj_kutu_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="mesaj_kutu" Type="MySQLDataModel.Store.mesaj_kutu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mesaj_kutu">
+              <PropertyRef Name="AliciID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="musteri_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="musteri" Type="MySQLDataModel.Store.musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="musteri">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="musteri_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="musteri" Type="MySQLDataModel.Store.musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="musteri">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="olay_giriscikis_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="olay_giriscikis" Type="MySQLDataModel.Store.olay_giriscikis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="olay_giriscikis">
+              <PropertyRef Name="KullaniciID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="olay_islem_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="olay_islem" Type="MySQLDataModel.Store.olay_islem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="olay_islem">
+              <PropertyRef Name="KullaniciID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="parametre_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="parametre" Type="MySQLDataModel.Store.parametre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="parametre">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="parametre_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="parametre" Type="MySQLDataModel.Store.parametre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="parametre">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sayfa_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sayfa" Type="MySQLDataModel.Store.sayfa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sayfa">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sayfa_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sayfa" Type="MySQLDataModel.Store.sayfa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sayfa">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_il_ibfk_1">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sehir_il" Type="MySQLDataModel.Store.sehir_il" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_il">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_il_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sehir_il" Type="MySQLDataModel.Store.sehir_il" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_il">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_ilce_ibfk_1">
+          <End Role="sehir_il" Type="MySQLDataModel.Store.sehir_il" Multiplicity="0..1" />
+          <End Role="sehir_ilce" Type="MySQLDataModel.Store.sehir_ilce" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_il">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_ilce">
+              <PropertyRef Name="IlID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_ilce_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sehir_ilce" Type="MySQLDataModel.Store.sehir_ilce" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_ilce">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_ilce_ibfk_3">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sehir_ilce" Type="MySQLDataModel.Store.sehir_ilce" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_ilce">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_semt_ibfk_1">
+          <End Role="sehir_ilce" Type="MySQLDataModel.Store.sehir_ilce" Multiplicity="0..1" />
+          <End Role="sehir_semt" Type="MySQLDataModel.Store.sehir_semt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_ilce">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_semt">
+              <PropertyRef Name="IlceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_semt_ibfk_2">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sehir_semt" Type="MySQLDataModel.Store.sehir_semt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_semt">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_semt_ibfk_3">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="sehir_semt" Type="MySQLDataModel.Store.sehir_semt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_semt">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_1">
+          <End Role="sehir_il" Type="MySQLDataModel.Store.sehir_il" Multiplicity="0..1" />
+          <End Role="talep" Type="MySQLDataModel.Store.talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_il">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="Il" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_2">
+          <End Role="sehir_ilce" Type="MySQLDataModel.Store.sehir_ilce" Multiplicity="0..1" />
+          <End Role="talep" Type="MySQLDataModel.Store.talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_ilce">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="Ilce" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_3">
+          <End Role="sehir_semt" Type="MySQLDataModel.Store.sehir_semt" Multiplicity="0..1" />
+          <End Role="talep" Type="MySQLDataModel.Store.talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_semt">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="Semt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_4">
+          <End Role="kategori" Type="MySQLDataModel.Store.kategori" Multiplicity="0..1" />
+          <End Role="talep" Type="MySQLDataModel.Store.talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_5">
+          <End Role="kullanici" Type="MySQLDataModel.Store.kullanici" Multiplicity="0..1" />
+          <End Role="talep" Type="MySQLDataModel.Store.talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MySQLDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BaglantiCumlesi" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="haber" EntityType="MySQLDataModel.haber" />
+          <EntitySet Name="ilan" EntityType="MySQLDataModel.ilan" />
+          <EntitySet Name="ilan_degisken" EntityType="MySQLDataModel.ilan_degisken" />
+          <EntitySet Name="ilan_detay" EntityType="MySQLDataModel.ilan_detay" />
+          <EntitySet Name="ilan_ozellik" EntityType="MySQLDataModel.ilan_ozellik" />
+          <EntitySet Name="ilan_ozellik2" EntityType="MySQLDataModel.ilan_ozellik2" />
+          <EntitySet Name="ilan_resim" EntityType="MySQLDataModel.ilan_resim" />
+          <EntitySet Name="ilan_sabit" EntityType="MySQLDataModel.ilan_sabit" />
+          <EntitySet Name="ilan_sabit2" EntityType="MySQLDataModel.ilan_sabit2" />
+          <EntitySet Name="kategori" EntityType="MySQLDataModel.kategori" />
+          <EntitySet Name="kullanici" EntityType="MySQLDataModel.kullanici" />
+          <EntitySet Name="mesaj_kutu" EntityType="MySQLDataModel.mesaj_kutu" />
+          <EntitySet Name="musteri" EntityType="MySQLDataModel.musteri" />
+          <EntitySet Name="olay_giriscikis" EntityType="MySQLDataModel.olay_giriscikis" />
+          <EntitySet Name="olay_girishata" EntityType="MySQLDataModel.olay_girishata" />
+          <EntitySet Name="olay_islem" EntityType="MySQLDataModel.olay_islem" />
+          <EntitySet Name="parametre" EntityType="MySQLDataModel.parametre" />
+          <EntitySet Name="sayac" EntityType="MySQLDataModel.sayac" />
+          <EntitySet Name="sayac_sayfa" EntityType="MySQLDataModel.sayac_sayfa" />
+          <EntitySet Name="sayfa" EntityType="MySQLDataModel.sayfa" />
+          <EntitySet Name="sehir_il" EntityType="MySQLDataModel.sehir_il" />
+          <EntitySet Name="sehir_ilce" EntityType="MySQLDataModel.sehir_ilce" />
+          <EntitySet Name="sehir_semt" EntityType="MySQLDataModel.sehir_semt" />
+          <EntitySet Name="talep" EntityType="MySQLDataModel.talep" />
+          <AssociationSet Name="haber_ibfk_1" Association="MySQLDataModel.haber_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="haber" EntitySet="haber" />
+          </AssociationSet>
+          <AssociationSet Name="haber_ibfk_2" Association="MySQLDataModel.haber_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="haber" EntitySet="haber" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_1" Association="MySQLDataModel.ilan_detay_ibfk_1">
+            <End Role="ilan" EntitySet="ilan" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ibfk_1" Association="MySQLDataModel.ilan_ibfk_1">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="ilan" EntitySet="ilan" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ibfk_2" Association="MySQLDataModel.ilan_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan" EntitySet="ilan" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ibfk_3" Association="MySQLDataModel.ilan_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan" EntitySet="ilan" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_resim_ibfk_1" Association="MySQLDataModel.ilan_resim_ibfk_1">
+            <End Role="ilan" EntitySet="ilan" />
+            <End Role="ilan_resim" EntitySet="ilan_resim" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_degisken_ibfk_1" Association="MySQLDataModel.ilan_degisken_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_degisken" EntitySet="ilan_degisken" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_degisken_ibfk_2" Association="MySQLDataModel.ilan_degisken_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_degisken" EntitySet="ilan_degisken" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_3" Association="MySQLDataModel.ilan_sabit2_ibfk_3">
+            <End Role="ilan_degisken" EntitySet="ilan_degisken" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_2" Association="MySQLDataModel.ilan_detay_ibfk_2">
+            <End Role="ilan_sabit" EntitySet="ilan_sabit" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_3" Association="MySQLDataModel.ilan_detay_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_detay_ibfk_4" Association="MySQLDataModel.ilan_detay_ibfk_4">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_detay" EntitySet="ilan_detay" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik_ibfk_1" Association="MySQLDataModel.ilan_ozellik_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik" EntitySet="ilan_ozellik" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik_ibfk_2" Association="MySQLDataModel.ilan_ozellik_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik" EntitySet="ilan_ozellik" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_2" Association="MySQLDataModel.ilan_ozellik2_ibfk_2">
+            <End Role="ilan_ozellik" EntitySet="ilan_ozellik" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_1" Association="MySQLDataModel.ilan_ozellik2_ibfk_1">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_3" Association="MySQLDataModel.ilan_ozellik2_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_ozellik2_ibfk_4" Association="MySQLDataModel.ilan_ozellik2_ibfk_4">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_ozellik2" EntitySet="ilan_ozellik2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_resim_ibfk_2" Association="MySQLDataModel.ilan_resim_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_resim" EntitySet="ilan_resim" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_resim_ibfk_3" Association="MySQLDataModel.ilan_resim_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_resim" EntitySet="ilan_resim" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_1" Association="MySQLDataModel.ilan_sabit2_ibfk_1">
+            <End Role="ilan_sabit" EntitySet="ilan_sabit" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_2" Association="MySQLDataModel.ilan_sabit2_ibfk_2">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_4" Association="MySQLDataModel.ilan_sabit2_ibfk_4">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="ilan_sabit2_ibfk_5" Association="MySQLDataModel.ilan_sabit2_ibfk_5">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="ilan_sabit2" EntitySet="ilan_sabit2" />
+          </AssociationSet>
+          <AssociationSet Name="kategori_ibfk_1" Association="MySQLDataModel.kategori_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kategori" EntitySet="kategori" />
+          </AssociationSet>
+          <AssociationSet Name="kategori_ibfk_2" Association="MySQLDataModel.kategori_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kategori" EntitySet="kategori" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_4" Association="MySQLDataModel.talep_ibfk_4">
+            <End Role="kategori" EntitySet="kategori" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="kullanici_ibfk_1" Association="MySQLDataModel.kullanici_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kullanici1" EntitySet="kullanici" />
+          </AssociationSet>
+          <AssociationSet Name="kullanici_ibfk_2" Association="MySQLDataModel.kullanici_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="kullanici1" EntitySet="kullanici" />
+          </AssociationSet>
+          <AssociationSet Name="mesaj_kutu_ibfk_1" Association="MySQLDataModel.mesaj_kutu_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="mesaj_kutu" EntitySet="mesaj_kutu" />
+          </AssociationSet>
+          <AssociationSet Name="mesaj_kutu_ibfk_2" Association="MySQLDataModel.mesaj_kutu_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="mesaj_kutu" EntitySet="mesaj_kutu" />
+          </AssociationSet>
+          <AssociationSet Name="musteri_ibfk_1" Association="MySQLDataModel.musteri_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="musteri" EntitySet="musteri" />
+          </AssociationSet>
+          <AssociationSet Name="musteri_ibfk_2" Association="MySQLDataModel.musteri_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="musteri" EntitySet="musteri" />
+          </AssociationSet>
+          <AssociationSet Name="olay_giriscikis_ibfk_1" Association="MySQLDataModel.olay_giriscikis_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="olay_giriscikis" EntitySet="olay_giriscikis" />
+          </AssociationSet>
+          <AssociationSet Name="olay_islem_ibfk_1" Association="MySQLDataModel.olay_islem_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="olay_islem" EntitySet="olay_islem" />
+          </AssociationSet>
+          <AssociationSet Name="parametre_ibfk_1" Association="MySQLDataModel.parametre_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="parametre" EntitySet="parametre" />
+          </AssociationSet>
+          <AssociationSet Name="parametre_ibfk_2" Association="MySQLDataModel.parametre_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="parametre" EntitySet="parametre" />
+          </AssociationSet>
+          <AssociationSet Name="sayfa_ibfk_1" Association="MySQLDataModel.sayfa_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sayfa" EntitySet="sayfa" />
+          </AssociationSet>
+          <AssociationSet Name="sayfa_ibfk_2" Association="MySQLDataModel.sayfa_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sayfa" EntitySet="sayfa" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_il_ibfk_1" Association="MySQLDataModel.sehir_il_ibfk_1">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_il" EntitySet="sehir_il" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_il_ibfk_2" Association="MySQLDataModel.sehir_il_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_il" EntitySet="sehir_il" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_ilce_ibfk_2" Association="MySQLDataModel.sehir_ilce_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_ilce_ibfk_3" Association="MySQLDataModel.sehir_ilce_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_semt_ibfk_2" Association="MySQLDataModel.sehir_semt_ibfk_2">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_semt_ibfk_3" Association="MySQLDataModel.sehir_semt_ibfk_3">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_5" Association="MySQLDataModel.talep_ibfk_5">
+            <End Role="kullanici" EntitySet="kullanici" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_ilce_ibfk_1" Association="MySQLDataModel.sehir_ilce_ibfk_1">
+            <End Role="sehir_il" EntitySet="sehir_il" />
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_1" Association="MySQLDataModel.talep_ibfk_1">
+            <End Role="sehir_il" EntitySet="sehir_il" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="sehir_semt_ibfk_1" Association="MySQLDataModel.sehir_semt_ibfk_1">
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_2" Association="MySQLDataModel.talep_ibfk_2">
+            <End Role="sehir_ilce" EntitySet="sehir_ilce" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+          <AssociationSet Name="talep_ibfk_3" Association="MySQLDataModel.talep_ibfk_3">
+            <End Role="sehir_semt" EntitySet="sehir_semt" />
+            <End Role="talep" EntitySet="talep" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="haber">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="String" Name="Ozet" />
+          <Property Type="String" Name="Detay" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.haber_ibfk_1" FromRole="haber" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.haber_ibfk_2" FromRole="haber" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="ilan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KatID" />
+          <Property Type="String" Name="IlanTur" />
+          <Property Type="String" Name="Kod" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="Int32" Name="Fiyat" />
+          <Property Type="String" Name="FiyatTur" />
+          <Property Type="Int32" Name="IlanSure" />
+          <Property Type="Int32" Name="Il" />
+          <Property Type="Int32" Name="Ilce" />
+          <Property Type="Int32" Name="Semt" />
+          <Property Type="String" Name="Mevki" />
+          <Property Type="String" Name="Adres" />
+          <Property Type="Int32" Name="AdresGoster" />
+          <Property Type="String" Name="Ozellik" />
+          <Property Type="Int32" Name="Vitrin" />
+          <Property Type="Int32" Name="Arsiv" />
+          <Property Type="String" Name="Koordinat" />
+          <Property Type="Int32" Name="Satis" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="ilan_detay" Relationship="MySQLDataModel.ilan_detay_ibfk_1" FromRole="ilan" ToRole="ilan_detay" />
+          <NavigationProperty Name="kategori" Relationship="MySQLDataModel.ilan_ibfk_1" FromRole="ilan" ToRole="kategori" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.ilan_ibfk_2" FromRole="ilan" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.ilan_ibfk_3" FromRole="ilan" ToRole="kullanici" />
+          <NavigationProperty Name="ilan_resim" Relationship="MySQLDataModel.ilan_resim_ibfk_1" FromRole="ilan" ToRole="ilan_resim" />
+        </EntityType>
+        <EntityType Name="ilan_degisken">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UstID" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="String" Name="Değer" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.ilan_degisken_ibfk_1" FromRole="ilan_degisken" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.ilan_degisken_ibfk_2" FromRole="ilan_degisken" ToRole="kullanici" />
+          <NavigationProperty Name="ilan_sabit2" Relationship="MySQLDataModel.ilan_sabit2_ibfk_3" FromRole="ilan_degisken" ToRole="ilan_sabit2" />
+        </EntityType>
+        <EntityType Name="ilan_detay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IlanID" />
+          <Property Type="Int32" Name="SabitID" />
+          <Property Type="String" Name="Deger" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="ilan" Relationship="MySQLDataModel.ilan_detay_ibfk_1" FromRole="ilan_detay" ToRole="ilan" />
+          <NavigationProperty Name="ilan_sabit" Relationship="MySQLDataModel.ilan_detay_ibfk_2" FromRole="ilan_detay" ToRole="ilan_sabit" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.ilan_detay_ibfk_3" FromRole="ilan_detay" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.ilan_detay_ibfk_4" FromRole="ilan_detay" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="ilan_ozellik">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UstID" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.ilan_ozellik_ibfk_1" FromRole="ilan_ozellik" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.ilan_ozellik_ibfk_2" FromRole="ilan_ozellik" ToRole="kullanici" />
+          <NavigationProperty Name="ilan_ozellik2" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_2" FromRole="ilan_ozellik" ToRole="ilan_ozellik2" />
+        </EntityType>
+        <EntityType Name="ilan_ozellik2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KatID" />
+          <Property Type="Int32" Name="OzellikID" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="ilan_ozellik" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_2" FromRole="ilan_ozellik2" ToRole="ilan_ozellik" />
+          <NavigationProperty Name="kategori" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_1" FromRole="ilan_ozellik2" ToRole="kategori" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_3" FromRole="ilan_ozellik2" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_4" FromRole="ilan_ozellik2" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="ilan_resim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IlanID" />
+          <Property Type="String" Name="Resim" />
+          <Property Type="Int32" Name="Varsayilan" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="ilan" Relationship="MySQLDataModel.ilan_resim_ibfk_1" FromRole="ilan_resim" ToRole="ilan" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.ilan_resim_ibfk_2" FromRole="ilan_resim" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.ilan_resim_ibfk_3" FromRole="ilan_resim" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="ilan_sabit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Sabit" />
+          <NavigationProperty Name="ilan_detay" Relationship="MySQLDataModel.ilan_detay_ibfk_2" FromRole="ilan_sabit" ToRole="ilan_detay" />
+          <NavigationProperty Name="ilan_sabit2" Relationship="MySQLDataModel.ilan_sabit2_ibfk_1" FromRole="ilan_sabit" ToRole="ilan_sabit2" />
+        </EntityType>
+        <EntityType Name="ilan_sabit2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SabitID" />
+          <Property Type="Int32" Name="KatID" />
+          <Property Type="String" Name="Tip" />
+          <Property Type="Int32" Name="IlanDegiskenID" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="ilan_degisken" Relationship="MySQLDataModel.ilan_sabit2_ibfk_3" FromRole="ilan_sabit2" ToRole="ilan_degisken" />
+          <NavigationProperty Name="ilan_sabit" Relationship="MySQLDataModel.ilan_sabit2_ibfk_1" FromRole="ilan_sabit2" ToRole="ilan_sabit" />
+          <NavigationProperty Name="kategori" Relationship="MySQLDataModel.ilan_sabit2_ibfk_2" FromRole="ilan_sabit2" ToRole="kategori" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.ilan_sabit2_ibfk_4" FromRole="ilan_sabit2" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.ilan_sabit2_ibfk_5" FromRole="ilan_sabit2" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="kategori">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="Int32" Name="AltMenu" />
+          <Property Type="Int32" Name="Sira" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="ilan" Relationship="MySQLDataModel.ilan_ibfk_1" FromRole="kategori" ToRole="ilan" />
+          <NavigationProperty Name="ilan_ozellik2" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_1" FromRole="kategori" ToRole="ilan_ozellik2" />
+          <NavigationProperty Name="ilan_sabit2" Relationship="MySQLDataModel.ilan_sabit2_ibfk_2" FromRole="kategori" ToRole="ilan_sabit2" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.kategori_ibfk_1" FromRole="kategori" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.kategori_ibfk_2" FromRole="kategori" ToRole="kullanici" />
+          <NavigationProperty Name="talep" Relationship="MySQLDataModel.talep_ibfk_4" FromRole="kategori" ToRole="talep" />
+        </EntityType>
+        <EntityType Name="kullanici">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Adi" />
+          <Property Type="String" Name="EPosta" />
+          <Property Type="String" Name="Sifre" />
+          <Property Type="String" Name="Telefon" />
+          <Property Type="DateTime" Name="SonGiris" />
+          <Property Type="String" Name="SonIP" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="haber" Relationship="MySQLDataModel.haber_ibfk_1" FromRole="kullanici" ToRole="haber" />
+          <NavigationProperty Name="haber1" Relationship="MySQLDataModel.haber_ibfk_2" FromRole="kullanici" ToRole="haber" />
+          <NavigationProperty Name="ilan" Relationship="MySQLDataModel.ilan_ibfk_2" FromRole="kullanici" ToRole="ilan" />
+          <NavigationProperty Name="ilan1" Relationship="MySQLDataModel.ilan_ibfk_3" FromRole="kullanici" ToRole="ilan" />
+          <NavigationProperty Name="ilan_degisken" Relationship="MySQLDataModel.ilan_degisken_ibfk_1" FromRole="kullanici" ToRole="ilan_degisken" />
+          <NavigationProperty Name="ilan_degisken1" Relationship="MySQLDataModel.ilan_degisken_ibfk_2" FromRole="kullanici" ToRole="ilan_degisken" />
+          <NavigationProperty Name="ilan_detay" Relationship="MySQLDataModel.ilan_detay_ibfk_3" FromRole="kullanici" ToRole="ilan_detay" />
+          <NavigationProperty Name="ilan_detay1" Relationship="MySQLDataModel.ilan_detay_ibfk_4" FromRole="kullanici" ToRole="ilan_detay" />
+          <NavigationProperty Name="ilan_ozellik" Relationship="MySQLDataModel.ilan_ozellik_ibfk_1" FromRole="kullanici" ToRole="ilan_ozellik" />
+          <NavigationProperty Name="ilan_ozellik1" Relationship="MySQLDataModel.ilan_ozellik_ibfk_2" FromRole="kullanici" ToRole="ilan_ozellik" />
+          <NavigationProperty Name="ilan_ozellik2" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_3" FromRole="kullanici" ToRole="ilan_ozellik2" />
+          <NavigationProperty Name="ilan_ozellik21" Relationship="MySQLDataModel.ilan_ozellik2_ibfk_4" FromRole="kullanici" ToRole="ilan_ozellik2" />
+          <NavigationProperty Name="ilan_resim" Relationship="MySQLDataModel.ilan_resim_ibfk_2" FromRole="kullanici" ToRole="ilan_resim" />
+          <NavigationProperty Name="ilan_resim1" Relationship="MySQLDataModel.ilan_resim_ibfk_3" FromRole="kullanici" ToRole="ilan_resim" />
+          <NavigationProperty Name="ilan_sabit2" Relationship="MySQLDataModel.ilan_sabit2_ibfk_4" FromRole="kullanici" ToRole="ilan_sabit2" />
+          <NavigationProperty Name="ilan_sabit21" Relationship="MySQLDataModel.ilan_sabit2_ibfk_5" FromRole="kullanici" ToRole="ilan_sabit2" />
+          <NavigationProperty Name="kategori" Relationship="MySQLDataModel.kategori_ibfk_1" FromRole="kullanici" ToRole="kategori" />
+          <NavigationProperty Name="kategori1" Relationship="MySQLDataModel.kategori_ibfk_2" FromRole="kullanici" ToRole="kategori" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.kullanici_ibfk_1" FromRole="kullanici" ToRole="kullanici1" />
+          <NavigationProperty Name="kullanici2" Relationship="MySQLDataModel.kullanici_ibfk_1" FromRole="kullanici1" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici11" Relationship="MySQLDataModel.kullanici_ibfk_2" FromRole="kullanici" ToRole="kullanici1" />
+          <NavigationProperty Name="kullanici3" Relationship="MySQLDataModel.kullanici_ibfk_2" FromRole="kullanici1" ToRole="kullanici" />
+          <NavigationProperty Name="mesaj_kutu" Relationship="MySQLDataModel.mesaj_kutu_ibfk_1" FromRole="kullanici" ToRole="mesaj_kutu" />
+          <NavigationProperty Name="mesaj_kutu1" Relationship="MySQLDataModel.mesaj_kutu_ibfk_2" FromRole="kullanici" ToRole="mesaj_kutu" />
+          <NavigationProperty Name="musteri" Relationship="MySQLDataModel.musteri_ibfk_1" FromRole="kullanici" ToRole="musteri" />
+          <NavigationProperty Name="musteri1" Relationship="MySQLDataModel.musteri_ibfk_2" FromRole="kullanici" ToRole="musteri" />
+          <NavigationProperty Name="olay_giriscikis" Relationship="MySQLDataModel.olay_giriscikis_ibfk_1" FromRole="kullanici" ToRole="olay_giriscikis" />
+          <NavigationProperty Name="olay_islem" Relationship="MySQLDataModel.olay_islem_ibfk_1" FromRole="kullanici" ToRole="olay_islem" />
+          <NavigationProperty Name="parametre" Relationship="MySQLDataModel.parametre_ibfk_1" FromRole="kullanici" ToRole="parametre" />
+          <NavigationProperty Name="parametre1" Relationship="MySQLDataModel.parametre_ibfk_2" FromRole="kullanici" ToRole="parametre" />
+          <NavigationProperty Name="sayfa" Relationship="MySQLDataModel.sayfa_ibfk_1" FromRole="kullanici" ToRole="sayfa" />
+          <NavigationProperty Name="sayfa1" Relationship="MySQLDataModel.sayfa_ibfk_2" FromRole="kullanici" ToRole="sayfa" />
+          <NavigationProperty Name="sehir_il" Relationship="MySQLDataModel.sehir_il_ibfk_1" FromRole="kullanici" ToRole="sehir_il" />
+          <NavigationProperty Name="sehir_il1" Relationship="MySQLDataModel.sehir_il_ibfk_2" FromRole="kullanici" ToRole="sehir_il" />
+          <NavigationProperty Name="sehir_ilce" Relationship="MySQLDataModel.sehir_ilce_ibfk_2" FromRole="kullanici" ToRole="sehir_ilce" />
+          <NavigationProperty Name="sehir_ilce1" Relationship="MySQLDataModel.sehir_ilce_ibfk_3" FromRole="kullanici" ToRole="sehir_ilce" />
+          <NavigationProperty Name="sehir_semt" Relationship="MySQLDataModel.sehir_semt_ibfk_2" FromRole="kullanici" ToRole="sehir_semt" />
+          <NavigationProperty Name="sehir_semt1" Relationship="MySQLDataModel.sehir_semt_ibfk_3" FromRole="kullanici" ToRole="sehir_semt" />
+          <NavigationProperty Name="talep" Relationship="MySQLDataModel.talep_ibfk_5" FromRole="kullanici" ToRole="talep" />
+        </EntityType>
+        <EntityType Name="mesaj_kutu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="GonderenID" />
+          <Property Type="Int32" Name="AliciID" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="String" Name="Detay" />
+          <Property Type="Int32" Name="Okundu" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.mesaj_kutu_ibfk_1" FromRole="mesaj_kutu" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.mesaj_kutu_ibfk_2" FromRole="mesaj_kutu" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="musteri">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Ad" />
+          <Property Type="String" Name="Telefon" />
+          <Property Type="String" Name="Adres" />
+          <Property Type="String" Name="Not" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.musteri_ibfk_1" FromRole="musteri" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.musteri_ibfk_2" FromRole="musteri" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="olay_giriscikis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KullaniciID" />
+          <Property Type="String" Name="Islem" />
+          <Property Type="String" Name="Ip" />
+          <Property Type="String" Name="All_http" />
+          <Property Type="String" Name="All_raw" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.olay_giriscikis_ibfk_1" FromRole="olay_giriscikis" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="olay_girishata">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Kullanici" />
+          <Property Type="String" Name="Islem" />
+          <Property Type="String" Name="Ip" />
+          <Property Type="DateTime" Name="KayitTarih" />
+        </EntityType>
+        <EntityType Name="olay_islem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KullaniciID" />
+          <Property Type="String" Name="Tablo" />
+          <Property Type="String" Name="Islem" />
+          <Property Type="String" Name="KayıtID" />
+          <Property Type="String" Name="Ip" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.olay_islem_ibfk_1" FromRole="olay_islem" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="parametre">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Firma" />
+          <Property Type="String" Name="Telefon" />
+          <Property Type="String" Name="CepTelefon" />
+          <Property Type="String" Name="Faks" />
+          <Property Type="String" Name="Adres" />
+          <Property Type="String" Name="EPosta" />
+          <Property Type="String" Name="SiteAdres" />
+          <Property Type="String" Name="Smtp" />
+          <Property Type="String" Name="SmtpEPosta" />
+          <Property Type="String" Name="SmtpEPostaSifre" />
+          <Property Type="String" Name="SmtpPort" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="String" Name="Aciklama" />
+          <Property Type="String" Name="Anahtar" />
+          <Property Type="String" Name="Facebook" />
+          <Property Type="String" Name="Twitter" />
+          <Property Type="String" Name="GuvenlikKodu" />
+          <Property Type="String" Name="GoogleMapApi" />
+          <Property Type="String" Name="ReCaptchaPublicKey" />
+          <Property Type="String" Name="ReCaptchaPrivateKey" />
+          <Property Type="String" Name="YoneticiListeKayitSayi" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.parametre_ibfk_1" FromRole="parametre" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.parametre_ibfk_2" FromRole="parametre" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="sayac">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Ip" />
+          <Property Type="Int32" Name="Cogul" />
+          <Property Type="String" Name="Agent" />
+          <Property Type="String" Name="Tarayici" />
+          <Property Type="String" Name="IsletimSistemi" />
+          <Property Type="String" Name="Dil" />
+          <Property Type="String" Name="Referans" />
+          <Property Type="String" Name="UlkeKod" />
+          <Property Type="String" Name="UlkeAd" />
+          <Property Type="String" Name="Il" />
+          <Property Type="String" Name="Ilce" />
+          <Property Type="String" Name="Enlem" />
+          <Property Type="String" Name="Boylam" />
+          <Property Type="Int32" Name="Bot" />
+          <Property Type="DateTime" Name="Tarih" />
+        </EntityType>
+        <EntityType Name="sayac_sayfa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Ip" />
+          <Property Type="String" Name="Sayfa" />
+          <Property Type="Int32" Name="Hit" />
+          <Property Type="DateTime" Name="Tarih" />
+        </EntityType>
+        <EntityType Name="sayfa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UstID" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="String" Name="Ozet" />
+          <Property Type="String" Name="Detay" />
+          <Property Type="Int32" Name="AnaMenu" />
+          <Property Type="Int32" Name="AltMenu" />
+          <Property Type="Int32" Name="Sira" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.sayfa_ibfk_1" FromRole="sayfa" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.sayfa_ibfk_2" FromRole="sayfa" ToRole="kullanici" />
+        </EntityType>
+        <EntityType Name="sehir_il">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="String" Name="Plaka" />
+          <Property Type="String" Name="AlanKod" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.sehir_il_ibfk_1" FromRole="sehir_il" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.sehir_il_ibfk_2" FromRole="sehir_il" ToRole="kullanici" />
+          <NavigationProperty Name="sehir_ilce" Relationship="MySQLDataModel.sehir_ilce_ibfk_1" FromRole="sehir_il" ToRole="sehir_ilce" />
+          <NavigationProperty Name="talep" Relationship="MySQLDataModel.talep_ibfk_1" FromRole="sehir_il" ToRole="talep" />
+        </EntityType>
+        <EntityType Name="sehir_ilce">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IlID" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.sehir_ilce_ibfk_2" FromRole="sehir_ilce" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.sehir_ilce_ibfk_3" FromRole="sehir_ilce" ToRole="kullanici" />
+          <NavigationProperty Name="sehir_il" Relationship="MySQLDataModel.sehir_ilce_ibfk_1" FromRole="sehir_ilce" ToRole="sehir_il" />
+          <NavigationProperty Name="sehir_semt" Relationship="MySQLDataModel.sehir_semt_ibfk_1" FromRole="sehir_ilce" ToRole="sehir_semt" />
+          <NavigationProperty Name="talep" Relationship="MySQLDataModel.talep_ibfk_2" FromRole="sehir_ilce" ToRole="talep" />
+        </EntityType>
+        <EntityType Name="sehir_semt">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IlceID" />
+          <Property Type="String" Name="Baslik" />
+          <Property Type="Int32" Name="Onay" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="EkleyenID" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.sehir_semt_ibfk_2" FromRole="sehir_semt" ToRole="kullanici" />
+          <NavigationProperty Name="kullanici1" Relationship="MySQLDataModel.sehir_semt_ibfk_3" FromRole="sehir_semt" ToRole="kullanici" />
+          <NavigationProperty Name="sehir_ilce" Relationship="MySQLDataModel.sehir_semt_ibfk_1" FromRole="sehir_semt" ToRole="sehir_ilce" />
+          <NavigationProperty Name="talep" Relationship="MySQLDataModel.talep_ibfk_3" FromRole="sehir_semt" ToRole="talep" />
+        </EntityType>
+        <EntityType Name="talep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Il" />
+          <Property Type="Int32" Name="Ilce" />
+          <Property Type="Int32" Name="Semt" />
+          <Property Type="Int32" Name="KatID" />
+          <Property Type="String" Name="IlanTur" />
+          <Property Type="String" Name="Adi" />
+          <Property Type="String" Name="Telefon" />
+          <Property Type="String" Name="EPosta" />
+          <Property Type="String" Name="Mesaj" />
+          <Property Type="String" Name="YoneticiMesaj" />
+          <Property Type="String" Name="IPAdres" />
+          <Property Type="String" Name="Durum" />
+          <Property Type="DateTime" Name="KayitTarih" />
+          <Property Type="DateTime" Name="DegisTarih" />
+          <Property Type="Int32" Name="GuncelleyenID" />
+          <NavigationProperty Name="kategori" Relationship="MySQLDataModel.talep_ibfk_4" FromRole="talep" ToRole="kategori" />
+          <NavigationProperty Name="kullanici" Relationship="MySQLDataModel.talep_ibfk_5" FromRole="talep" ToRole="kullanici" />
+          <NavigationProperty Name="sehir_il" Relationship="MySQLDataModel.talep_ibfk_1" FromRole="talep" ToRole="sehir_il" />
+          <NavigationProperty Name="sehir_ilce" Relationship="MySQLDataModel.talep_ibfk_2" FromRole="talep" ToRole="sehir_ilce" />
+          <NavigationProperty Name="sehir_semt" Relationship="MySQLDataModel.talep_ibfk_3" FromRole="talep" ToRole="sehir_semt" />
+        </EntityType>
+        <Association Name="haber_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.haber" Role="haber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="haber">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="haber_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.haber" Role="haber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="haber">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_1">
+          <End Type="MySQLDataModel.ilan" Role="ilan" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_detay" Role="ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="IlanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ibfk_1">
+          <End Type="MySQLDataModel.kategori" Role="kategori" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan" Role="ilan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan" Role="ilan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ibfk_3">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan" Role="ilan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_resim_ibfk_1">
+          <End Type="MySQLDataModel.ilan" Role="ilan" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_resim" Role="ilan_resim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_resim">
+              <PropertyRef Name="IlanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_degisken_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_degisken" Role="ilan_degisken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_degisken">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_degisken_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_degisken" Role="ilan_degisken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_degisken">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_3">
+          <End Type="MySQLDataModel.ilan_degisken" Role="ilan_degisken" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_sabit2" Role="ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_degisken">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="IlanDegiskenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_2">
+          <End Type="MySQLDataModel.ilan_sabit" Role="ilan_sabit" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_detay" Role="ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_sabit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="SabitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_3">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_detay" Role="ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_detay_ibfk_4">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_detay" Role="ilan_detay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_detay">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_ozellik" Role="ilan_ozellik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_ozellik" Role="ilan_ozellik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_2">
+          <End Type="MySQLDataModel.ilan_ozellik" Role="ilan_ozellik" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_ozellik2" Role="ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_ozellik">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="OzellikID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_1">
+          <End Type="MySQLDataModel.kategori" Role="kategori" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_ozellik2" Role="ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_3">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_ozellik2" Role="ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_ozellik2_ibfk_4">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_ozellik2" Role="ilan_ozellik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_ozellik2">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_resim_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_resim" Role="ilan_resim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_resim">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_resim_ibfk_3">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_resim" Role="ilan_resim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_resim">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_1">
+          <End Type="MySQLDataModel.ilan_sabit" Role="ilan_sabit" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_sabit2" Role="ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilan_sabit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="SabitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_2">
+          <End Type="MySQLDataModel.kategori" Role="kategori" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_sabit2" Role="ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_4">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_sabit2" Role="ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ilan_sabit2_ibfk_5">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.ilan_sabit2" Role="ilan_sabit2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ilan_sabit2">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kategori_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.kategori" Role="kategori" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kategori">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kategori_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.kategori" Role="kategori" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kategori">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_4">
+          <End Type="MySQLDataModel.kategori" Role="kategori" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.talep" Role="talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategori">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="KatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kullanici_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.kullanici" Role="kullanici1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kullanici1">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kullanici_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.kullanici" Role="kullanici1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kullanici1">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="mesaj_kutu_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.mesaj_kutu" Role="mesaj_kutu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mesaj_kutu">
+              <PropertyRef Name="GonderenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="mesaj_kutu_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.mesaj_kutu" Role="mesaj_kutu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mesaj_kutu">
+              <PropertyRef Name="AliciID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="musteri_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.musteri" Role="musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="musteri">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="musteri_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.musteri" Role="musteri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="musteri">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="olay_giriscikis_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.olay_giriscikis" Role="olay_giriscikis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="olay_giriscikis">
+              <PropertyRef Name="KullaniciID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="olay_islem_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.olay_islem" Role="olay_islem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="olay_islem">
+              <PropertyRef Name="KullaniciID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="parametre_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.parametre" Role="parametre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="parametre">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="parametre_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.parametre" Role="parametre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="parametre">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sayfa_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sayfa" Role="sayfa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sayfa">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sayfa_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sayfa" Role="sayfa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sayfa">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_il_ibfk_1">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_il" Role="sehir_il" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_il">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_il_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_il" Role="sehir_il" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_il">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_ilce_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_ilce" Role="sehir_ilce" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_ilce">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_ilce_ibfk_3">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_ilce" Role="sehir_ilce" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_ilce">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_semt_ibfk_2">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_semt" Role="sehir_semt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_semt">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_semt_ibfk_3">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_semt" Role="sehir_semt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_semt">
+              <PropertyRef Name="EkleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_5">
+          <End Type="MySQLDataModel.kullanici" Role="kullanici" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.talep" Role="talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="GuncelleyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_ilce_ibfk_1">
+          <End Type="MySQLDataModel.sehir_il" Role="sehir_il" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_ilce" Role="sehir_ilce" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_il">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_ilce">
+              <PropertyRef Name="IlID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_1">
+          <End Type="MySQLDataModel.sehir_il" Role="sehir_il" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.talep" Role="talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_il">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="Il" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sehir_semt_ibfk_1">
+          <End Type="MySQLDataModel.sehir_ilce" Role="sehir_ilce" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.sehir_semt" Role="sehir_semt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_ilce">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="sehir_semt">
+              <PropertyRef Name="IlceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_2">
+          <End Type="MySQLDataModel.sehir_ilce" Role="sehir_ilce" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.talep" Role="talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_ilce">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="Ilce" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="talep_ibfk_3">
+          <End Type="MySQLDataModel.sehir_semt" Role="sehir_semt" Multiplicity="0..1" />
+          <End Type="MySQLDataModel.talep" Role="talep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sehir_semt">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="talep">
+              <PropertyRef Name="Semt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MySQLDataModelStoreContainer" CdmEntityContainer="BaglantiCumlesi">
+          <EntitySetMapping Name="haber">
+            <EntityTypeMapping TypeName="MySQLDataModel.haber">
+              <MappingFragment StoreEntitySet="haber">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Detay" ColumnName="Detay" />
+                <ScalarProperty Name="Ozet" ColumnName="Ozet" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan">
+              <MappingFragment StoreEntitySet="ilan">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Satis" ColumnName="Satis" />
+                <ScalarProperty Name="Koordinat" ColumnName="Koordinat" />
+                <ScalarProperty Name="Arsiv" ColumnName="Arsiv" />
+                <ScalarProperty Name="Vitrin" ColumnName="Vitrin" />
+                <ScalarProperty Name="Ozellik" ColumnName="Ozellik" />
+                <ScalarProperty Name="AdresGoster" ColumnName="AdresGoster" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Mevki" ColumnName="Mevki" />
+                <ScalarProperty Name="Semt" ColumnName="Semt" />
+                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+                <ScalarProperty Name="Il" ColumnName="Il" />
+                <ScalarProperty Name="IlanSure" ColumnName="IlanSure" />
+                <ScalarProperty Name="FiyatTur" ColumnName="FiyatTur" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Kod" ColumnName="Kod" />
+                <ScalarProperty Name="IlanTur" ColumnName="IlanTur" />
+                <ScalarProperty Name="KatID" ColumnName="KatID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan_degisken">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan_degisken">
+              <MappingFragment StoreEntitySet="ilan_degisken">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Değer" ColumnName="Değer" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="UstID" ColumnName="UstID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan_detay">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan_detay">
+              <MappingFragment StoreEntitySet="ilan_detay">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Deger" ColumnName="Deger" />
+                <ScalarProperty Name="SabitID" ColumnName="SabitID" />
+                <ScalarProperty Name="IlanID" ColumnName="IlanID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan_ozellik">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan_ozellik">
+              <MappingFragment StoreEntitySet="ilan_ozellik">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="UstID" ColumnName="UstID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan_ozellik2">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan_ozellik2">
+              <MappingFragment StoreEntitySet="ilan_ozellik2">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="OzellikID" ColumnName="OzellikID" />
+                <ScalarProperty Name="KatID" ColumnName="KatID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan_resim">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan_resim">
+              <MappingFragment StoreEntitySet="ilan_resim">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Varsayilan" ColumnName="Varsayilan" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="IlanID" ColumnName="IlanID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan_sabit">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan_sabit">
+              <MappingFragment StoreEntitySet="ilan_sabit">
+                <ScalarProperty Name="Sabit" ColumnName="Sabit" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilan_sabit2">
+            <EntityTypeMapping TypeName="MySQLDataModel.ilan_sabit2">
+              <MappingFragment StoreEntitySet="ilan_sabit2">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="IlanDegiskenID" ColumnName="IlanDegiskenID" />
+                <ScalarProperty Name="Tip" ColumnName="Tip" />
+                <ScalarProperty Name="KatID" ColumnName="KatID" />
+                <ScalarProperty Name="SabitID" ColumnName="SabitID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kategori">
+            <EntityTypeMapping TypeName="MySQLDataModel.kategori">
+              <MappingFragment StoreEntitySet="kategori">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Sira" ColumnName="Sira" />
+                <ScalarProperty Name="AltMenu" ColumnName="AltMenu" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kullanici">
+            <EntityTypeMapping TypeName="MySQLDataModel.kullanici">
+              <MappingFragment StoreEntitySet="kullanici">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="SonIP" ColumnName="SonIP" />
+                <ScalarProperty Name="SonGiris" ColumnName="SonGiris" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mesaj_kutu">
+            <EntityTypeMapping TypeName="MySQLDataModel.mesaj_kutu">
+              <MappingFragment StoreEntitySet="mesaj_kutu">
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Okundu" ColumnName="Okundu" />
+                <ScalarProperty Name="Detay" ColumnName="Detay" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="AliciID" ColumnName="AliciID" />
+                <ScalarProperty Name="GonderenID" ColumnName="GonderenID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="musteri">
+            <EntityTypeMapping TypeName="MySQLDataModel.musteri">
+              <MappingFragment StoreEntitySet="musteri">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Not" ColumnName="Not" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="olay_giriscikis">
+            <EntityTypeMapping TypeName="MySQLDataModel.olay_giriscikis">
+              <MappingFragment StoreEntitySet="olay_giriscikis">
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="All_raw" ColumnName="All_raw" />
+                <ScalarProperty Name="All_http" ColumnName="All_http" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="Islem" ColumnName="Islem" />
+                <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="olay_girishata">
+            <EntityTypeMapping TypeName="MySQLDataModel.olay_girishata">
+              <MappingFragment StoreEntitySet="olay_girishata">
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="Islem" ColumnName="Islem" />
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="olay_islem">
+            <EntityTypeMapping TypeName="MySQLDataModel.olay_islem">
+              <MappingFragment StoreEntitySet="olay_islem">
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="KayıtID" ColumnName="KayıtID" />
+                <ScalarProperty Name="Islem" ColumnName="Islem" />
+                <ScalarProperty Name="Tablo" ColumnName="Tablo" />
+                <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="parametre">
+            <EntityTypeMapping TypeName="MySQLDataModel.parametre">
+              <MappingFragment StoreEntitySet="parametre">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="YoneticiListeKayitSayi" ColumnName="YoneticiListeKayitSayi" />
+                <ScalarProperty Name="ReCaptchaPrivateKey" ColumnName="ReCaptchaPrivateKey" />
+                <ScalarProperty Name="ReCaptchaPublicKey" ColumnName="ReCaptchaPublicKey" />
+                <ScalarProperty Name="GoogleMapApi" ColumnName="GoogleMapApi" />
+                <ScalarProperty Name="GuvenlikKodu" ColumnName="GuvenlikKodu" />
+                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+                <ScalarProperty Name="Anahtar" ColumnName="Anahtar" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="SmtpPort" ColumnName="SmtpPort" />
+                <ScalarProperty Name="SmtpEPostaSifre" ColumnName="SmtpEPostaSifre" />
+                <ScalarProperty Name="SmtpEPosta" ColumnName="SmtpEPosta" />
+                <ScalarProperty Name="Smtp" ColumnName="Smtp" />
+                <ScalarProperty Name="SiteAdres" ColumnName="SiteAdres" />
+                <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Faks" ColumnName="Faks" />
+                <ScalarProperty Name="CepTelefon" ColumnName="CepTelefon" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Firma" ColumnName="Firma" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sayac">
+            <EntityTypeMapping TypeName="MySQLDataModel.sayac">
+              <MappingFragment StoreEntitySet="sayac">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Bot" ColumnName="Bot" />
+                <ScalarProperty Name="Boylam" ColumnName="Boylam" />
+                <ScalarProperty Name="Enlem" ColumnName="Enlem" />
+                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+                <ScalarProperty Name="Il" ColumnName="Il" />
+                <ScalarProperty Name="UlkeAd" ColumnName="UlkeAd" />
+                <ScalarProperty Name="UlkeKod" ColumnName="UlkeKod" />
+                <ScalarProperty Name="Referans" ColumnName="Referans" />
+                <ScalarProperty Name="Dil" ColumnName="Dil" />
+                <ScalarProperty Name="IsletimSistemi" ColumnName="IsletimSistemi" />
+                <ScalarProperty Name="Tarayici" ColumnName="Tarayici" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+                <ScalarProperty Name="Cogul" ColumnName="Cogul" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sayac_sayfa">
+            <EntityTypeMapping TypeName="MySQLDataModel.sayac_sayfa">
+              <MappingFragment StoreEntitySet="sayac_sayfa">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Hit" ColumnName="Hit" />
+                <ScalarProperty Name="Sayfa" ColumnName="Sayfa" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sayfa">
+            <EntityTypeMapping TypeName="MySQLDataModel.sayfa">
+              <MappingFragment StoreEntitySet="sayfa">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Sira" ColumnName="Sira" />
+                <ScalarProperty Name="AltMenu" ColumnName="AltMenu" />
+                <ScalarProperty Name="AnaMenu" ColumnName="AnaMenu" />
+                <ScalarProperty Name="Detay" ColumnName="Detay" />
+                <ScalarProperty Name="Ozet" ColumnName="Ozet" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="UstID" ColumnName="UstID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sehir_il">
+            <EntityTypeMapping TypeName="MySQLDataModel.sehir_il">
+              <MappingFragment StoreEntitySet="sehir_il">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="AlanKod" ColumnName="AlanKod" />
+                <ScalarProperty Name="Plaka" ColumnName="Plaka" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sehir_ilce">
+            <EntityTypeMapping TypeName="MySQLDataModel.sehir_ilce">
+              <MappingFragment StoreEntitySet="sehir_ilce">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="IlID" ColumnName="IlID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sehir_semt">
+            <EntityTypeMapping TypeName="MySQLDataModel.sehir_semt">
+              <MappingFragment StoreEntitySet="sehir_semt">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="EkleyenID" ColumnName="EkleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Onay" ColumnName="Onay" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="IlceID" ColumnName="IlceID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="talep">
+            <EntityTypeMapping TypeName="MySQLDataModel.talep">
+              <MappingFragment StoreEntitySet="talep">
+                <ScalarProperty Name="GuncelleyenID" ColumnName="GuncelleyenID" />
+                <ScalarProperty Name="DegisTarih" ColumnName="DegisTarih" />
+                <ScalarProperty Name="KayitTarih" ColumnName="KayitTarih" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="IPAdres" ColumnName="IPAdres" />
+                <ScalarProperty Name="YoneticiMesaj" ColumnName="YoneticiMesaj" />
+                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+                <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="IlanTur" ColumnName="IlanTur" />
+                <ScalarProperty Name="KatID" ColumnName="KatID" />
+                <ScalarProperty Name="Semt" ColumnName="Semt" />
+                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+                <ScalarProperty Name="Il" ColumnName="Il" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MySQLDataModel">
+        <EntityTypeShape EntityType="MySQLDataModel.haber" Width="1.5" PointX="3" PointY="8.625" Height="3.1340950520833388" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan" Width="1.5" PointX="5.25" PointY="28.25" Height="6.5955208333333388" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan_degisken" Width="1.5" PointX="3" PointY="12.5" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan_detay" Width="1.5" PointX="7.5" PointY="31.875" Height="3.326396484374996" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan_ozellik" Width="1.5" PointX="3" PointY="24" Height="3.1340950520833246" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan_ozellik2" Width="1.5" PointX="8.25" PointY="27.75" Height="3.326396484374996" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan_resim" Width="1.5" PointX="10.5" PointY="29.875" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan_sabit" Width="1.5" PointX="3" PointY="20.875" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="MySQLDataModel.ilan_sabit2" Width="1.5" PointX="5.25" PointY="22.75" Height="3.9033007812500102" />
+        <EntityTypeShape EntityType="MySQLDataModel.kategori" Width="1.5" PointX="3" PointY="27.875" Height="3.9033007812500102" />
+        <EntityTypeShape EntityType="MySQLDataModel.kullanici" Width="1.5" PointX="0.75" PointY="26.125" Height="10.826152343750014" />
+        <EntityTypeShape EntityType="MySQLDataModel.mesaj_kutu" Width="1.5" PointX="3" PointY="32.5" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="MySQLDataModel.musteri" Width="1.5" PointX="3" PointY="36" Height="3.1340950520833388" />
+        <EntityTypeShape EntityType="MySQLDataModel.olay_giriscikis" Width="1.5" PointX="3" PointY="39.875" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="MySQLDataModel.olay_girishata" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="MySQLDataModel.olay_islem" Width="1.5" PointX="3" PointY="43.25" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="MySQLDataModel.parametre" Width="1.5" PointX="3" PointY="46.5" Height="6.4032194010416532" />
+        <EntityTypeShape EntityType="MySQLDataModel.sayac" Width="1.5" PointX="2.75" PointY="0.75" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="MySQLDataModel.sayac_sayfa" Width="1.5" PointX="4.75" PointY="0.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="MySQLDataModel.sayfa" Width="1.5" PointX="3" PointY="53.625" Height="3.9033007812500102" />
+        <EntityTypeShape EntityType="MySQLDataModel.sehir_il" Width="1.5" PointX="3" PointY="58.25" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="MySQLDataModel.sehir_ilce" Width="1.5" PointX="8.25" PointY="43.25" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="MySQLDataModel.sehir_semt" Width="1.5" PointX="10.5" PointY="34.75" Height="3.3263964843749818" />
+        <EntityTypeShape EntityType="MySQLDataModel.talep" Width="1.5" PointX="5.25" PointY="41.5" Height="5.0571093749999818" />
+        <AssociationConnector Association="MySQLDataModel.haber_ibfk_1" >
+          <ConnectorPoint PointX="1.5" PointY="26.125" />
+          <ConnectorPoint PointX="1.5" PointY="10.192047526041669" />
+          <ConnectorPoint PointX="3" PointY="10.192047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.haber_ibfk_2" >
+          <ConnectorPoint PointX="1.9062525" PointY="26.125" />
+          <ConnectorPoint PointX="1.9062525" PointY="11.006823789062498" />
+          <ConnectorPoint PointX="3" PointY="11.006823789062498" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_detay_ibfk_1" >
+          <ConnectorPoint PointX="6.75" PointY="33.360260416666669" />
+          <ConnectorPoint PointX="7.5" PointY="33.360260416666669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ibfk_1" >
+          <ConnectorPoint PointX="4.5" PointY="30.014150390625005" />
+          <ConnectorPoint PointX="5.25" PointY="30.014150390625005" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ibfk_2" >
+          <ConnectorPoint PointX="2.25" PointY="32.139150390625005" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="32.139150390625005" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="32.139150390625005" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="32.139150390625005" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="32.139150390625005" />
+          <ConnectorPoint PointX="5.25" PointY="32.139150390625005" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ibfk_3" >
+          <ConnectorPoint PointX="2.25" PointY="31.927475585937508" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="31.927475585937508" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="31.927475585937508" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="31.927475585937508" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="31.927475585937508" />
+          <ConnectorPoint PointX="4.5658414713541644" PointY="31.927475585937508" />
+          <ConnectorPoint PointX="4.7325081380208305" PointY="31.927475585937508" />
+          <ConnectorPoint PointX="5.25" PointY="31.927475585937508" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_resim_ibfk_1" >
+          <ConnectorPoint PointX="6.75" PointY="31.475698242187498" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="31.475698242187498" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="31.475698242187498" />
+          <ConnectorPoint PointX="9.3229166666666661" PointY="31.475698242187498" />
+          <ConnectorPoint PointX="9.4895833333333339" PointY="31.475698242187498" />
+          <ConnectorPoint PointX="10.5" PointY="31.475698242187498" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_degisken_ibfk_1" >
+          <ConnectorPoint PointX="1.0937475" PointY="26.125" />
+          <ConnectorPoint PointX="1.0937475" PointY="14.163198242187505" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="14.163198242187505" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="14.163198242187505" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="14.163198242187505" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="14.163198242187505" />
+          <ConnectorPoint PointX="3" PointY="14.163198242187505" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_degisken_ibfk_2" >
+          <ConnectorPoint PointX="2.10937875" PointY="26.125" />
+          <ConnectorPoint PointX="2.10937875" PointY="15.026049863281251" />
+          <ConnectorPoint PointX="3" PointY="15.026049863281251" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_sabit2_ibfk_3" >
+          <ConnectorPoint PointX="4.5" PointY="14.163198242187505" />
+          <ConnectorPoint PointX="6" PointY="14.163198242187505" />
+          <ConnectorPoint PointX="6" PointY="22.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_detay_ibfk_2" >
+          <ConnectorPoint PointX="4.5" PointY="21.768992513020834" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="21.768992513020834" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="21.768992513020834" />
+          <ConnectorPoint PointX="7.84375" PointY="21.768992513020834" />
+          <ConnectorPoint PointX="7.84375" PointY="31.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_detay_ibfk_3" >
+          <ConnectorPoint PointX="2.25" PointY="35.624746093750005" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="35.624746093750005" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="35.624746093750005" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="35.624746093750005" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="35.624746093750005" />
+          <ConnectorPoint PointX="8.25" PointY="35.624746093750005" />
+          <ConnectorPoint PointX="8.25" PointY="35.201396484374996" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_detay_ibfk_4" >
+          <ConnectorPoint PointX="2.25" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="7.8437475" PointY="35.437116640624957" />
+          <ConnectorPoint PointX="7.8437475" PointY="35.201396484374996" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ozellik_ibfk_1" >
+          <ConnectorPoint PointX="2.25" PointY="26.629547526041662" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="26.629547526041662" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="26.629547526041662" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="26.629547526041662" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="26.629547526041662" />
+          <ConnectorPoint PointX="3" PointY="26.629547526041662" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ozellik_ibfk_2" >
+          <ConnectorPoint PointX="2.25" PointY="26.314773763020831" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="26.314773763020831" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="26.314773763020831" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="26.314773763020831" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="26.314773763020831" />
+          <ConnectorPoint PointX="3" PointY="26.314773763020831" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ozellik2_ibfk_2" >
+          <ConnectorPoint PointX="4.5" PointY="26.924947916666667" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="26.924947916666667" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="26.924947916666667" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="26.924947916666667" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="26.924947916666667" />
+          <ConnectorPoint PointX="9" PointY="26.924947916666667" />
+          <ConnectorPoint PointX="9" PointY="27.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ozellik2_ibfk_1" >
+          <ConnectorPoint PointX="4.5" PointY="28.03125" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="28.03125" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="28.03125" />
+          <ConnectorPoint PointX="8.25" PointY="28.03125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ozellik2_ibfk_3" >
+          <ConnectorPoint PointX="2.25" PointY="27.78125" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="27.78125" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="27.78125" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="27.78125" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="27.78125" />
+          <ConnectorPoint PointX="4.51156951282051" PointY="27.78125" />
+          <ConnectorPoint PointX="4.6782361794871763" PointY="27.78125" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="27.78125" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="27.78125" />
+          <ConnectorPoint PointX="8.25" PointY="27.78125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_ozellik2_ibfk_4" >
+          <ConnectorPoint PointX="2.25" PointY="35.812375546875053" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="35.812375546875053" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="35.812375546875053" />
+          <ConnectorPoint PointX="9.40625" PointY="35.812375546875053" />
+          <ConnectorPoint PointX="9.40625" PointY="31.076396484374996" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_resim_ibfk_2" >
+          <ConnectorPoint PointX="2.25" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="11.25" PointY="27.442047526041662" />
+          <ConnectorPoint PointX="11.25" PointY="29.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_resim_ibfk_3" >
+          <ConnectorPoint PointX="2.25" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="4.6967932497996285" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="4.8634599164662946" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="10.8437475" PointY="27.596026263020882" />
+          <ConnectorPoint PointX="10.8437475" PointY="29.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_sabit2_ibfk_1" >
+          <ConnectorPoint PointX="4.5" PointY="22.247241269531244" />
+          <ConnectorPoint PointX="5.5937475" PointY="22.247241269531244" />
+          <ConnectorPoint PointX="5.5937475" PointY="22.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_sabit2_ibfk_2" >
+          <ConnectorPoint PointX="4.5" PointY="27.876152846153843" />
+          <ConnectorPoint PointX="4.875" PointY="27.501152846153843" />
+          <ConnectorPoint PointX="4.875" PointY="24.701650390625005" />
+          <ConnectorPoint PointX="5.25" PointY="24.701650390625005" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_sabit2_ibfk_4" >
+          <ConnectorPoint PointX="1.70312625" PointY="26.125" />
+          <ConnectorPoint PointX="1.70312625" PointY="23.34375" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="23.34375" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="23.34375" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="23.34375" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="23.34375" />
+          <ConnectorPoint PointX="5.25" PointY="23.34375" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.ilan_sabit2_ibfk_5" >
+          <ConnectorPoint PointX="1.29687375" PointY="26.125" />
+          <ConnectorPoint PointX="1.29687375" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="1.6197929166666667" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="1.7864595833333332" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="23.671877499999994" />
+          <ConnectorPoint PointX="5.25" PointY="23.671877499999994" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.kategori_ibfk_1" >
+          <ConnectorPoint PointX="2.25" PointY="29.826650390625005" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="29.826650390625005" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="29.826650390625005" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="29.826650390625005" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="29.826650390625005" />
+          <ConnectorPoint PointX="3" PointY="29.826650390625005" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.kategori_ibfk_2" >
+          <ConnectorPoint PointX="2.25" PointY="28.788325195312503" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="28.788325195312503" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="28.788325195312503" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="28.788325195312503" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="28.788325195312503" />
+          <ConnectorPoint PointX="3" PointY="28.788325195312503" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.talep_ibfk_4" >
+          <ConnectorPoint PointX="4.5" PointY="31.77830078125001" />
+          <ConnectorPoint PointX="4.875" PointY="32.15330078125001" />
+          <ConnectorPoint PointX="4.875" PointY="44.028554687499991" />
+          <ConnectorPoint PointX="5.25" PointY="44.028554687499991" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.kullanici_ibfk_1" >
+          <ConnectorPoint PointX="1.23" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="1.23" PointY="37.20115234375001" />
+          <ConnectorPoint PointX="1.2359208493589742" PointY="37.20115234375001" />
+          <ConnectorPoint PointX="1.4025875160256407" PointY="37.20115234375001" />
+          <ConnectorPoint PointX="1.4218589743589742" PointY="37.20115234375001" />
+          <ConnectorPoint PointX="1.5885256410256408" PointY="37.20115234375001" />
+          <ConnectorPoint PointX="1.6869230769230768" PointY="37.20115234375001" />
+          <ConnectorPoint PointX="1.6869230769230768" PointY="36.95115234375001" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.kullanici_ibfk_2" >
+          <ConnectorPoint PointX="0.75" PointY="29.813466947115387" />
+          <ConnectorPoint PointX="0.5" PointY="29.813466947115387" />
+          <ConnectorPoint PointX="0.5" PointY="33.3448096454327" />
+          <ConnectorPoint PointX="0.75" PointY="33.3448096454327" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.mesaj_kutu_ibfk_1" >
+          <ConnectorPoint PointX="2.25" PointY="33.874746093750005" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="33.874746093750005" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="33.874746093750005" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="33.874746093750005" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="33.874746093750005" />
+          <ConnectorPoint PointX="3" PointY="33.874746093750005" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.mesaj_kutu_ibfk_2" >
+          <ConnectorPoint PointX="2.25" PointY="33.124873046875" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="33.124873046875" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="33.124873046875" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="33.124873046875" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="33.124873046875" />
+          <ConnectorPoint PointX="3" PointY="33.124873046875" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.musteri_ibfk_1" >
+          <ConnectorPoint PointX="2.25" PointY="36.475576171875005" />
+          <ConnectorPoint PointX="3" PointY="36.475576171875005" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.musteri_ibfk_2" >
+          <ConnectorPoint PointX="2.25" PointY="36.1752880859375" />
+          <ConnectorPoint PointX="3" PointY="36.1752880859375" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.olay_giriscikis_ibfk_1" >
+          <ConnectorPoint PointX="0.98470903846153834" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="0.98470903846153834" PointY="41.153595377604162" />
+          <ConnectorPoint PointX="1.0499827243589743" PointY="41.153595377604162" />
+          <ConnectorPoint PointX="1.2166493910256409" PointY="41.153595377604162" />
+          <ConnectorPoint PointX="1.2359208493589742" PointY="41.153595377604162" />
+          <ConnectorPoint PointX="1.4025875160256407" PointY="41.153595377604162" />
+          <ConnectorPoint PointX="1.4218589743589742" PointY="41.153595377604162" />
+          <ConnectorPoint PointX="2.2810799679487177" PointY="41.153595377604162" />
+          <ConnectorPoint PointX="3" PointY="41.153595377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.olay_islem_ibfk_1" >
+          <ConnectorPoint PointX="2.0204832692307693" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="2.0204832692307693" PointY="44.528595377604162" />
+          <ConnectorPoint PointX="2.0831608012820513" PointY="44.528595377604162" />
+          <ConnectorPoint PointX="2.2498274679487182" PointY="44.528595377604162" />
+          <ConnectorPoint PointX="3" PointY="44.528595377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.parametre_ibfk_1" >
+          <ConnectorPoint PointX="1.5051923076923075" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="1.5051923076923075" PointY="49.701609700520827" />
+          <ConnectorPoint PointX="1.5334935897435897" PointY="49.701609700520827" />
+          <ConnectorPoint PointX="1.7001602564102563" PointY="49.701609700520827" />
+          <ConnectorPoint PointX="1.7911390705128205" PointY="49.701609700520827" />
+          <ConnectorPoint PointX="1.957805737179487" PointY="49.701609700520827" />
+          <ConnectorPoint PointX="2.0831608012820513" PointY="49.701609700520827" />
+          <ConnectorPoint PointX="2.2498274679487182" PointY="49.701609700520827" />
+          <ConnectorPoint PointX="3" PointY="49.701609700520827" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.parametre_ibfk_2" >
+          <ConnectorPoint PointX="1.1333160576923076" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="1.1333160576923076" PointY="48.069552350260423" />
+          <ConnectorPoint PointX="1.4218589743589742" PointY="48.069552350260423" />
+          <ConnectorPoint PointX="1.700160256410256" PointY="48.069552350260423" />
+          <ConnectorPoint PointX="1.7911390705128205" PointY="48.069552350260423" />
+          <ConnectorPoint PointX="1.957805737179487" PointY="48.069552350260423" />
+          <ConnectorPoint PointX="2.0831608012820513" PointY="48.069552350260423" />
+          <ConnectorPoint PointX="2.2498274679487182" PointY="48.069552350260423" />
+          <ConnectorPoint PointX="3" PointY="48.069552350260423" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sayfa_ibfk_1" >
+          <ConnectorPoint PointX="0.8361020192307691" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="0.8361020192307691" PointY="55.576650390625005" />
+          <ConnectorPoint PointX="1.5334935897435897" PointY="55.576650390625005" />
+          <ConnectorPoint PointX="1.7001602564102563" PointY="55.576650390625005" />
+          <ConnectorPoint PointX="1.7911390705128205" PointY="55.576650390625005" />
+          <ConnectorPoint PointX="1.957805737179487" PointY="55.576650390625005" />
+          <ConnectorPoint PointX="3" PointY="55.576650390625005" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sayfa_ibfk_2" >
+          <ConnectorPoint PointX="2.1664941346153848" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="2.1664941346153848" PointY="54.569572695312509" />
+          <ConnectorPoint PointX="3" PointY="54.569572695312509" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_il_ibfk_1" >
+          <ConnectorPoint PointX="1.8744724038461538" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="1.8744724038461538" PointY="60.009348958333334" />
+          <ConnectorPoint PointX="3" PointY="60.009348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_il_ibfk_2" >
+          <ConnectorPoint PointX="1.616826923076923" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="1.616826923076923" PointY="59.098421979166673" />
+          <ConnectorPoint PointX="1.7911390705128205" PointY="59.098421979166673" />
+          <ConnectorPoint PointX="1.957805737179487" PointY="59.098421979166673" />
+          <ConnectorPoint PointX="3" PointY="59.098421979166673" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_ilce_ibfk_2" >
+          <ConnectorPoint PointX="1.3192541826923074" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="1.3192541826923074" PointY="46.057190755208325" />
+          <ConnectorPoint PointX="1.4218589743589742" PointY="46.057190755208325" />
+          <ConnectorPoint PointX="1.9578057371794868" PointY="46.057190755208325" />
+          <ConnectorPoint PointX="2.0831608012820513" PointY="46.057190755208325" />
+          <ConnectorPoint PointX="2.2498274679487182" PointY="46.057190755208325" />
+          <ConnectorPoint PointX="5" PointY="46.057190755208325" />
+          <ConnectorPoint PointX="5" PointY="46.807109374999982" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="46.807109374999982" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="46.807109374999982" />
+          <ConnectorPoint PointX="7.541666666666667" PointY="46.807109374999982" />
+          <ConnectorPoint PointX="7.708333333333333" PointY="46.807109374999982" />
+          <ConnectorPoint PointX="7.875" PointY="46.807109374999982" />
+          <ConnectorPoint PointX="7.875" PointY="45.009348958333334" />
+          <ConnectorPoint PointX="8.25" PointY="45.009348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_ilce_ibfk_3" >
+          <ConnectorPoint PointX="1.7456496634615384" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="1.7456496634615384" PointY="46.182190755208325" />
+          <ConnectorPoint PointX="1.7911390705128205" PointY="46.182190755208325" />
+          <ConnectorPoint PointX="1.957805737179487" PointY="46.182190755208325" />
+          <ConnectorPoint PointX="2.0831608012820513" PointY="46.182190755208325" />
+          <ConnectorPoint PointX="2.2498274679487182" PointY="46.182190755208325" />
+          <ConnectorPoint PointX="4.75" PointY="46.182190755208325" />
+          <ConnectorPoint PointX="4.75" PointY="47.057109374999982" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="47.057109374999982" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="47.057109374999982" />
+          <ConnectorPoint PointX="7.625" PointY="47.057109374999982" />
+          <ConnectorPoint PointX="7.625" PointY="44.098422479166672" />
+          <ConnectorPoint PointX="8.25" PointY="44.098422479166672" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_semt_ibfk_2" >
+          <ConnectorPoint PointX="0.89062175" PointY="26.125" />
+          <ConnectorPoint PointX="0.89062175" PointY="25.875" />
+          <ConnectorPoint PointX="1.0104141666666668" PointY="25.875" />
+          <ConnectorPoint PointX="1.1770808333333334" PointY="25.875" />
+          <ConnectorPoint PointX="1.2135404166666668" PointY="25.875" />
+          <ConnectorPoint PointX="1.3802070833333333" PointY="25.875" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="25.875" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="25.875" />
+          <ConnectorPoint PointX="1.6197929166666667" PointY="25.875" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="25.875" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="25.875" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="25.875" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="25.875" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="25.875" />
+          <ConnectorPoint PointX="2.75" PointY="25.875" />
+          <ConnectorPoint PointX="2.75" PointY="35.75" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="35.75" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="35.75" />
+          <ConnectorPoint PointX="10.125" PointY="35.75" />
+          <ConnectorPoint PointX="10.125" PointY="36.413198242187491" />
+          <ConnectorPoint PointX="10.5" PointY="36.413198242187491" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_semt_ibfk_3" >
+          <ConnectorPoint PointX="1.804689375" PointY="26.125" />
+          <ConnectorPoint PointX="1.804689375" PointY="25.625" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="25.625" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="25.625" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="25.625" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="25.625" />
+          <ConnectorPoint PointX="2.5" PointY="25.625" />
+          <ConnectorPoint PointX="2.5" PointY="35.6875" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="35.6875" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="35.6875" />
+          <ConnectorPoint PointX="9.3229166666666661" PointY="35.6875" />
+          <ConnectorPoint PointX="9.4895833333333339" PointY="35.6875" />
+          <ConnectorPoint PointX="9.875" PointY="35.6875" />
+          <ConnectorPoint PointX="9.875" PointY="37.276049363281231" />
+          <ConnectorPoint PointX="10.5" PointY="37.276049363281231" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.talep_ibfk_5" >
+          <ConnectorPoint PointX="2.1977466346153847" PointY="36.95115234375001" />
+          <ConnectorPoint PointX="2.1977466346153847" PointY="42.841095377604162" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="42.841095377604162" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="42.841095377604162" />
+          <ConnectorPoint PointX="5.25" PointY="42.841095377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_ilce_ibfk_1" >
+          <ConnectorPoint PointX="4.5" PointY="60.009348958333334" />
+          <ConnectorPoint PointX="9" PointY="60.009348958333334" />
+          <ConnectorPoint PointX="9" PointY="46.768697916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.talep_ibfk_1" >
+          <ConnectorPoint PointX="4.5" PointY="59.098421979166673" />
+          <ConnectorPoint PointX="6" PointY="59.098421979166673" />
+          <ConnectorPoint PointX="6" PointY="46.557109374999982" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.sehir_semt_ibfk_1" >
+          <ConnectorPoint PointX="9.578125" PointY="43.25" />
+          <ConnectorPoint PointX="9.578125" PointY="37.7074754238281" />
+          <ConnectorPoint PointX="10.5" PointY="37.7074754238281" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.talep_ibfk_2" >
+          <ConnectorPoint PointX="8.25" PointY="45.845729166666658" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="45.845729166666658" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="45.845729166666658" />
+          <ConnectorPoint PointX="7.708333333333333" PointY="45.845729166666658" />
+          <ConnectorPoint PointX="7.541666666666667" PointY="45.845729166666658" />
+          <ConnectorPoint PointX="6.75" PointY="45.845729166666658" />
+        </AssociationConnector>
+        <AssociationConnector Association="MySQLDataModel.talep_ibfk_3" >
+          <ConnectorPoint PointX="11.25" PointY="38.076396484374982" />
+          <ConnectorPoint PointX="11.25" PointY="42.34375" />
+          <ConnectorPoint PointX="9.6614583333333339" PointY="42.34375" />
+          <ConnectorPoint PointX="9.4947916666666661" PointY="42.34375" />
+          <ConnectorPoint PointX="6.75" PointY="42.34375" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,47 @@
+﻿body {background:#FFF; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#858585;}
+a {color:#858585;}
+a:hover {color:#2F2F2F;}
+
+.fulldiv {background:url(../Image/divbg.jpg); border-top:1px solid #DDD; border-bottom:1px solid #DDD; padding:20px 0px; overflow:hidden;}
+.fulldiv2 {border-top:1px solid #DDD; border-bottom:1px solid #DDD; padding:20px 0px; overflow:hidden;}
+.icdiv {margin:auto; width:960px; overflow:hidden;}
+
+.arama {margin:auto; width:940px; overflow:hidden; border-bottom:1px solid #FFF; background:#DDD; padding:0 10px 10px 10px; font-size:11px;}
+.nerdesin {margin:auto; width:940px; overflow:hidden; background:#DDD; padding:10px; font-size:11px;}
+
+.anamenu {list-style:none;}
+.anamenu li {float:left; display:inline; height:60px; padding:40px 10px 0px 10px; border-right:1px solid #DDD;}
+.anamenu li.ilk {border-left:1px solid #DDD;}
+.anamenu li h3 a {font-size:18px; color:#A4A4A4;}
+.anamenu li h3 a:hover {color:#4966A1;}
+.anamenu li:hover {background:url(../Image/anamenubg.jpg) repeat-x bottom;}
+
+.anakategori {list-style:none;}
+.anakategori li {float:left; display:inline; margin-right:20px;}
+.anakategori li h3 a {font-size:18px; color:#4966A1;}
+.anakategori li h3 a:hover {color:#2F2F2F;}
+
+.ilanvurgu h1 {font-size:19px; color:#2F2F2F;}
+.ilanvurgu h3 {font-size:14px;}
+.ilandetayfiyat {font-size:19px; color:#990000;}
+
+.alt h3 {font-size:19px; color:#2F2F2F; margin-bottom:10px;}
+.alt ul {list-style:none;}
+.alt ul li {padding:10px 0px; border-bottom:1px dotted #CCC;}
+
+.beyazilan h1 {color:#4966A1; font-size:20px; margin-bottom:10px;}
+
+/* Vitrin ilan */
+.vitrinilanitem {width:184px; height:250px; background:#FFF;}
+.vitrinilanitem .vitrinilanresim {width:184px; height:130px; background:#CCC;}
+.vitrinilanitem .ilanbaslik {font-weight:bold; color:#2F2F2F;}
+.vitrinilanitem .ilanfiyat {font-weight:bold; color:#990000;}
+.vitrinilanitem .ilandetay {padding:0 10px 10px 10px;}
+
+/* Yardımcı style */
+.clear {clear:both;}
+.sol {float:left; display:inline;}
+.sag {float:right; display:inline;}
+.h10 {height:10px;}
+.p10 {padding:10px;}
+.w5 {width:5px;}
